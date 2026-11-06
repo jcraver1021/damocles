@@ -1,0 +1,52 @@
+{
+  "name": "damocles",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "ingest": "node ingest/index.ts",
+    "lint": "npm run lint:ts && npm run lint:md && npm run lint:py",
+    "fix": "npm run fix:ts && npm run fix:md && npm run fix:py",
+    "check-format": "npm run check-format:js && npm run check-format:py",
+    "format": "npm run format:js && npm run format:py",
+    "lint:ts": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "fix:ts": "eslint . --fix",
+    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --ignore .venv",
+    "fix:md": "markdownlint \"**/*.md\" --ignore node_modules --ignore .venv --fix",
+    "check-format:js": "prettier --check .",
+    "format:js": "prettier --write .",
+    "setup:py": "python3 -m venv .venv && .venv/bin/pip install -q -r requirements-dev.txt",
+    "lint:py": ".venv/bin/ruff check .",
+    "fix:py": ".venv/bin/ruff check --fix .",
+    "check-format:py": ".venv/bin/ruff format --check .",
+    "format:py": ".venv/bin/ruff format .",
+    "scorecards:hrc": ".venv/bin/python -I pipeline/hrc_scorecard.py",
+    "verify:anchors": "node scripts/verify-anchors.ts",
+    "verify:quotes": "node scripts/verify-quotes.ts",
+    "find:fec": "node scripts/find-fec.ts"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.14.0",
+    "markdownlint-cli": "^0.50.0",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.6"
+  }
+}

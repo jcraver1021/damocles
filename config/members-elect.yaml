@@ -1,0 +1,1589 @@
+# Members-elect until congress-legislators lists them (then delete these).
+# Name, party, and finance come from FEC data.
+#
+# members[]: fec (ID; find with `npm run find:fec`), chamber, state,
+#   district (House; 0 = at-large), status (projected | certified),
+#   sourceUrl (the race call). Optional: replaces + departureReason
+#   (defeated | retiring | other-office | other), bioguide (prior members),
+#   name, website, priorOffice, calledBy, notes.
+# departing[]: members leaving with no called successor (member, reason, notes).
+# uncalled[]: races still counting; move to members once called.
+
+termStart: 2027-01-03
+researched: 2026-11-05
+departing:
+  - member: G000553
+    reason: defeated
+    notes: 'Al Green (TX-9): ran in the new TX-18 after redistricting; Christian Menefee won.'
+  - member: D000399
+    reason: retiring
+    notes: 'Lloyd Doggett (TX-37): not on the 2026 ballot after Texas redistricting.'
+  - member: V000131
+    reason: retiring
+    notes: 'Marc Veasey (TX-33): retired.'
+  - member: L000595
+    reason: other-office
+    notes: 'Julia Letlow (LA-5): elected to the Senate; LA-5 goes to a December runoff.'
+  - member: B001302
+    reason: other-office
+    notes: 'Andy Biggs (AZ-5): ran for governor; AZ-5 uncalled.'
+  - member: P000197
+    reason: retiring
+    notes: 'Nancy Pelosi (CA-11): retiring; CA-11 is D-vs-D, uncalled.'
+  - member: N000189
+    reason: retiring
+    notes: 'Dan Newhouse (WA-4): retiring; WA-4 uncalled.'
+  - member: G000592
+    reason: retiring
+    notes: 'Jared Golden (ME-2): not running; ME-2 uncalled.'
+  - member: S001196
+    reason: retiring
+    notes: 'Elise Stefanik (NY-21): not seeking re-election; NY-21 uncalled.'
+  - member: M001216
+    reason: defeated
+    notes: 'Cory Mills (FL-7): lost the primary; FL-7 uncalled.'
+  - member: M000194
+    reason: other-office
+    notes: 'Nancy Mace (SC-1): ran for governor; SC-1 uncalled.'
+  - member: C001068
+    reason: retiring
+    notes: 'Steve Cohen (TN-9): withdrew in May 2026 after redistricting; TN-9 uncalled.'
+  - member: P000610
+    reason: other-office
+    notes: 'Stacey Plaskett (VI delegate): elected governor of the Virgin Islands; delegate race uncalled.'
+members:
+  - fec: S6AL00476
+    name: Barry Moore
+    chamber: senate
+    state: AL
+    status: projected
+    sourceUrl: https://www.wsfa.com/2026/11/04/barry-moore-projected-win-alabamas-open-us-senate-seat/
+    replaces: T000278
+    departureReason: other-office
+    bioguide: M001212
+    calledBy: AP, Decision Desk HQ
+    notes: US Rep (AL-1). Tuberville ran for governor. Beat Everett Wess (D), about 54.7-45.3.
+
+  - fec: S6IA00298
+    name: Josh Turek
+    chamber: senate
+    state: IA
+    status: projected
+    sourceUrl: https://iowacapitaldispatch.com/2026/11/03/democrat-josh-turek-wins-iowas-u-s-senate-seat-ap-projects/
+    replaces: E000295
+    departureReason: retiring
+    calledBy: AP, NBC
+    notes: D flip. Beat Rep. Ashley Hinson (R). Turek was a state representative; not checked further for prior congressional service.
+
+  - fec: S6IL00458
+    name: Juliana Stratton
+    chamber: senate
+    state: IL
+    status: projected
+    sourceUrl: https://www.nbcchicago.com/news/local/chicago-politics/illinois-senate-election-juliana-stratton-defeats-don-tracy-nbc-news-projects/4011549/
+    replaces: D000563
+    departureReason: retiring
+    calledBy: NBC, ABC, CBS, Decision Desk HQ
+    notes: Lt. Governor. Beat Don Tracy (R).
+
+  - fec: S6KS00312
+    name: Adam Hamilton
+    chamber: senate
+    state: KS
+    status: projected
+    sourceUrl: https://www.cbsnews.com/news/kansas-2026-senate-hamilton-marshall/
+    replaces: M001198
+    departureReason: defeated
+    calledBy: AP, CBS, NBC
+    notes: D flip. Pastor (Church of the Resurrection). First Kansas Democratic senator elected since 1932.
+
+  - fec: S6KY00286
+    name: Andy Barr
+    chamber: senate
+    state: KY
+    status: projected
+    sourceUrl: https://abcnews.com/Politics/kentucky-2026-live-midterm-election-results/story?id=136765668
+    replaces: M000355
+    departureReason: retiring
+    bioguide: B001282
+    calledBy: ABC, Decision Desk HQ
+    notes: US Rep (KY-6). Beat Charles Booker (D).
+
+  - fec: S6LA00664
+    name: Julia Letlow
+    chamber: senate
+    state: LA
+    status: projected
+    sourceUrl: https://www.wafb.com/2026/11/04/julia-letlow-projected-win-louisiana-senate-race/
+    replaces: C001075
+    departureReason: defeated
+    bioguide: L000595
+    calledBy: unspecified; called by multiple outlets, Davis conceded
+    notes: US Rep (LA-5). Cassidy lost the GOP primary to Letlow. Narrow general win over Jamie Davis (D), about 51-49. Davis conceded. Sources name no specific decision desk.
+
+  - fec: S6ME00464
+    name: Troy Jackson
+    chamber: senate
+    state: ME
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/senate-results
+    replaces: C001035
+    departureReason: defeated
+    calledBy: NBC
+    notes: D flip. About 53.3-46.7.
+
+  - fec: S6MI00418
+    name: Abdul El-Sayed
+    chamber: senate
+    state: MI
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/senate-results
+    replaces: P000595
+    departureReason: retiring
+    calledBy: NBC
+    notes: Beat Mike Rogers (R), about 52.5-45.5.
+
+  - fec: S6MN00440
+    name: Peggy Flanagan
+    chamber: senate
+    state: MN
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/senate-results
+    replaces: S001203
+    departureReason: retiring
+    calledBy: NBC
+    notes: Lt. Governor. Beat Tafoya (R).
+
+  - fec: S6MT00295
+    name: Kurt Alme
+    chamber: senate
+    state: MT
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/montana-senate-results
+    replaces: D000618
+    departureReason: retiring
+    calledBy: AP, NBC, Decision Desk HQ
+    notes: Daines left just before the filing deadline. Beat independent Seth Bodnar (conceded) and Alani Bankhead (D).
+
+  - fec: S6NC00407
+    name: Roy Cooper
+    chamber: senate
+    state: NC
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/senate-results
+    replaces: T000476
+    departureReason: retiring
+    calledBy: NBC
+    notes: D flip. Former governor. Beat Michael Whatley (R).
+
+  - fec: S6NH00141
+    name: Chris Pappas
+    chamber: senate
+    state: NH
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/senate-results
+    replaces: S001181
+    departureReason: retiring
+    bioguide: P000614
+    calledBy: NBC
+    notes: US Rep (NH-1). Beat John E. Sununu (R), about 56-42.
+
+  - fec: S6OH00163
+    name: Sherrod Brown
+    chamber: senate
+    state: OH
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/senate-results
+    replaces: H001104
+    departureReason: defeated
+    bioguide: B000944
+    calledBy: NBC
+    notes: D flip. Special election for the Vance seat; Husted was appointed in 2025. Brown is a former senator (2007-2025) and former US Rep, so he is returning to the Senate, not new to it.
+
+  - fec: S6OK04247
+    name: Kevin Hern
+    chamber: senate
+    state: OK
+    status: projected
+    sourceUrl: https://www.newson6.com/oklahoma-politics/oklahoma-u-s-senate-election-results
+    replaces: A000383
+    departureReason: other
+    bioguide: H001082
+    calledBy: AP, NBC, Decision Desk HQ
+    notes: US Rep (OK-1). Mullin's seat (class 2, regular race). Mullin resigned 2026-03-23 to become DHS secretary. Interim senator Armstrong could not run. Only one OK Senate race was on the ballot; Lankford's seat was not up.
+
+  - fec: S6SC04239
+    name: Annie Andrews
+    chamber: senate
+    state: SC
+    status: projected
+    sourceUrl: https://www.cbsnews.com/news/south-carolina-2026-senate-annie-andrews-darline-graham/
+    replaces: G000608
+    departureReason: defeated
+    calledBy: AP, CBS, NBC, CNN
+    notes: D flip. Lindsey Graham died in July 2026. His sister Darline Graham was appointed by Gov. McMaster and won the GOP nomination. Regular class-2 race; Tim Scott's seat was not up.
+
+  - fec: S6TX00479
+    name: James Talarico
+    chamber: senate
+    state: TX
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/senate-results
+    replaces: C001056
+    departureReason: defeated
+    calledBy: NBC, CBS
+    notes: D flip. Cornyn lost the GOP nomination to Ken Paxton. Talarico beat Paxton, about 55-43.
+
+  - fec: S6WY00209
+    name: Harriet Hageman
+    chamber: senate
+    state: WY
+    status: projected
+    sourceUrl: https://www.bloomberg.com/news/articles/2026-11-04/republican-hageman-wins-wyoming-senate-race-ap-projects
+    replaces: L000571
+    departureReason: retiring
+    bioguide: H001096
+    calledBy: AP, Decision Desk HQ
+    notes: US Rep (WY at-large). Beat James Byrd (D).
+
+  - fec: H0AL01055
+    name: Jerry Carl
+    chamber: house
+    state: AL
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/alabama-house-results
+    replaces: M001212
+    departureReason: other-office
+    bioguide: C001054
+    calledBy: NBC
+    notes: 'Moore ran for U.S. Senate. Carl is a former U.S. Rep. (AL-1, 2021-2025). District redrawn for 2026. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Alabama'
+
+  - fec: H4AZ01194
+    name: Amish Shah
+    chamber: house
+    state: AZ
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/arizona-house-results
+    replaces: S001183
+    departureReason: other-office
+    calledBy: NBC
+    notes: Schweikert ran for AZ governor. Shah 52.5% vs Jay Feely (R) 45.4%; D gain.
+
+  - fec: H6CA01269
+    name: Mike McGuire
+    chamber: house
+    state: CA
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/california-house-results
+    replaces: G000607
+    departureReason: defeated
+    calledBy: NBC
+    notes: Gallagher won 2026 special to succeed Doug LaMalfa; McGuire 57% at ~50% expected vote in. D gain.
+
+  - fec: H6CA03158
+    name: Richard Pan
+    chamber: house
+    state: CA
+    district: 6
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/california-house-results
+    replaces: K000401
+    departureReason: defeated
+    calledBy: NBC
+    notes: Kiley (old CA-3, now Independent) ran in redrawn CA-6 and lost 57.5-42.5. Ami Bera (old CA-6) moved to CA-3 and won.
+
+  - fec: H6CA22190
+    name: Randy Villegas
+    chamber: house
+    state: CA
+    district: 22
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/california-house-results
+    replaces: V000129
+    departureReason: defeated
+    calledBy: NBC
+    notes: 66.4-33.6 at 57% in. D gain.
+
+  - fec: H6CA26266
+    name: Jacqui Irwin
+    chamber: house
+    state: CA
+    district: 26
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/california-house-results
+    replaces: B001285
+    departureReason: retiring
+    calledBy: NBC
+    notes: Irwin 61.8% vs Sam Gallucci (R).
+
+  - fec: H6CA34286
+    name: Angela Gonzales-Torres
+    chamber: house
+    state: CA
+    district: 34
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/california-house-results
+    replaces: G000585
+    departureReason: defeated
+    calledBy: NBC
+    notes: D-vs-D general; 59.7-40.3 at 75.6% in.
+
+  - fec: H6CA38139
+    name: Hilda Solis
+    chamber: house
+    state: CA
+    district: 38
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/california-house-results
+    bioguide: S001153
+    calledBy: NBC
+    notes: 'Wikipedia: new Prop 50 seat with no incumbent. Old-CA-38 member Linda Sánchez ran in CA-41 and was projected re-elected. Solis was a US Rep 2001-2009.'
+
+  - fec: H6CA48310
+    name: Marni von Wilpert
+    chamber: house
+    state: CA
+    district: 48
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/california-house-results
+    replaces: I000056
+    departureReason: retiring
+    calledBy: NBC
+    notes: Issa dropped his re-election bid in March 2026 after Prop 50. She beat Jim Desmond (R) 59.5-40.5. D gain.
+
+  - fec: H6CO01273
+    name: Melat Kiros
+    chamber: house
+    state: CO
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/colorado-house-results
+    replaces: D000197
+    departureReason: defeated
+    calledBy: NBC
+    notes: DeGette lost the June 30, 2026 Democratic primary to Kiros.
+
+  - fec: H6CO08013
+    name: Manny Rutinel
+    chamber: house
+    state: CO
+    district: 8
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/colorado-house-results
+    replaces: E000300
+    departureReason: defeated
+    calledBy: NBC
+    notes: 54.5-41.6. D gain.
+
+  - fec: H6CT01206
+    name: Luke Bronin
+    chamber: house
+    state: CT
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/connecticut-house-results
+    replaces: L000557
+    departureReason: defeated
+    calledBy: NBC
+    notes: Larson lost Aug 11 2026 Democratic primary to Bronin (https://ctmirror.org/2026/08/11/john-larson-luke-bronin-primary-election-results/). Won general 67.1%.
+
+  - fec: H6DC01079
+    name: Robert White
+    chamber: house
+    state: DC
+    district: 0
+    status: projected
+    sourceUrl: https://www.nbcwashington.com/elections/washington-dc-election-results-2026-midterms/4172988/
+    replaces: N000147
+    departureReason: retiring
+    calledBy: NBC
+    notes: NBC4 marks White 'Projected Winner' (87.3%); Norton retired (https://51st.news/dc-general-election-results-2026/). Non-voting delegate.
+
+  - fec: H6FL02331
+    name: Austin Rogers
+    chamber: house
+    state: FL
+    district: 2
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/florida-house-results
+    replaces: D000628
+    departureReason: retiring
+    calledBy: NBC
+    notes: 'NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Florida'
+
+  - fec: H6FL11332
+    name: Joe Strada
+    chamber: house
+    state: FL
+    district: 11
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/florida-house-results
+    replaces: W000806
+    departureReason: retiring
+    calledBy: NBC
+    notes: 'Webster withdrew from re-election. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Florida'
+
+  - fec: H6FL16141
+    name: Sydney Gruters
+    chamber: house
+    state: FL
+    district: 16
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/florida-house-results
+    replaces: B001260
+    departureReason: retiring
+    calledBy: NBC
+    notes: 'NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Florida'
+
+  - fec: H6FL19137
+    name: Jim Schwartzel
+    chamber: house
+    state: FL
+    district: 19
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/florida-house-results
+    replaces: D000032
+    departureReason: other-office
+    calledBy: NBC
+    notes: 'Donalds ran for governor. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Florida'
+
+  - fec: H6FL21059
+    name: Pia Dandiya
+    chamber: house
+    state: FL
+    district: 22
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/florida-house-results
+    replaces: F000462
+    departureReason: other
+    calledBy: NBC
+    notes: 'Florida redrew districts; Frankel ran in (and won) the new FL-23 instead. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Florida'
+
+  - fec: H6FL24095
+    name: Oliver Gilbert III
+    chamber: house
+    state: FL
+    district: 24
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/florida-house-results
+    replaces: W000808
+    departureReason: retiring
+    calledBy: NBC
+    notes: 'Wilson announced in May 2026 she would not seek another term. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Florida'
+
+  - fec: H6GA01109
+    name: Jim Kingston
+    chamber: house
+    state: GA
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/georgia-house-results
+    replaces: C001103
+    departureReason: other-office
+    calledBy: NBC
+    notes: 'Carter ran for U.S. Senate. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Georgia'
+
+  - fec: H6GA10175
+    name: Houston Gaines
+    chamber: house
+    state: GA
+    district: 10
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/georgia-house-results
+    replaces: C001129
+    departureReason: other-office
+    calledBy: NBC
+    notes: 'Collins ran for U.S. Senate. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Georgia'
+
+  - fec: H0GA14048
+    name: John Cowan
+    chamber: house
+    state: GA
+    district: 11
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/georgia-house-results
+    replaces: L000583
+    departureReason: retiring
+    calledBy: NBC
+    notes: 'NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Georgia'
+
+  - fec: H6GA13070
+    name: Jasmine Clark
+    chamber: house
+    state: GA
+    district: 13
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/georgia-house-results
+    replaces: B001328
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'Blair won the 2026 special election after David Scott died (April 2026), then lost the Democratic primary to Clark. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Georgia'
+
+  - fec: H2IA02111
+    name: Christina Bohannan
+    chamber: house
+    state: IA
+    district: 1
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/iowa
+    replaces: M001215
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC: Bohannan 52.8, Miller-Meeks 43.6'
+
+  - fec: H6IA02211
+    name: Lindsay James
+    chamber: house
+    state: IA
+    district: 2
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/iowa
+    replaces: H001091
+    departureReason: other-office
+    calledBy: AP
+
+  - fec: H6IA03268
+    name: Sarah Trone Garriott
+    chamber: house
+    state: IA
+    district: 3
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/iowa
+    replaces: N000193
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC: Trone Garriott 53.6, Nunn 46.4'
+
+  - fec: H6IA04167
+    name: Chris McGowan
+    chamber: house
+    state: IA
+    district: 4
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/iowa
+    replaces: F000446
+    departureReason: other-office
+    calledBy: AP
+
+  - fec: H6IL02355
+    name: Donna Miller
+    chamber: house
+    state: IL
+    district: 2
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/illinois
+    replaces: K000385
+    departureReason: other-office
+    calledBy: AP
+
+  - fec: H6IL04153
+    name: Patty Garcia
+    chamber: house
+    state: IL
+    district: 4
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/illinois
+    replaces: G000586
+    departureReason: retiring
+    calledBy: AP
+
+  - fec: H6IL07354
+    name: La Shawn Ford
+    chamber: house
+    state: IL
+    district: 7
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/illinois
+    replaces: D000096
+    departureReason: retiring
+    calledBy: AP
+
+  - fec: H6IL08329
+    name: Melissa Bean
+    chamber: house
+    state: IL
+    district: 8
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/illinois
+    replaces: K000391
+    departureReason: other-office
+    bioguide: B001253
+    calledBy: AP
+    notes: Bean represented IL-8 2005-2011; Krishnamoorthi ran for US Senate; reason from prior knowledge of 2026 cycle, not stated on source page
+
+  - fec: H6IL09228
+    name: Daniel Biss
+    chamber: house
+    state: IL
+    district: 9
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/illinois
+    replaces: S001145
+    departureReason: retiring
+    calledBy: AP
+
+  - fec: H6IN05307
+    name: J.D. Ford
+    chamber: house
+    state: IN
+    district: 5
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/indiana
+    replaces: S000929
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC shows Ford 51.7 / Spartz (inc.) 48.3: https://www.nbcnews.com/politics/2026-elections/indiana-us-house-district-5-results'
+
+  - fec: H6KY04171
+    name: Ed Gallrein
+    chamber: house
+    state: KY
+    district: 4
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/kentucky-house-results
+    replaces: M001184
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'Massie lost the Republican primary to Gallrein. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Kentucky'
+
+  - fec: H6KY06184
+    name: Zach Dembo
+    chamber: house
+    state: KY
+    district: 6
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/kentucky-house-results
+    replaces: B001282
+    departureReason: other-office
+    calledBy: NBC
+    notes: 'Barr ran for U.S. Senate. D flip. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Kentucky'
+
+  - fec: H8MA03072
+    name: Dan Koh
+    chamber: house
+    state: MA
+    district: 6
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/massachusetts-house-results
+    replaces: M001196
+    departureReason: other-office
+    calledBy: NBC
+    notes: Moulton ran for U.S. Senate (vs. Markey); reason from background knowledge, not re-verified this session.
+
+  - fec: H6MD05321
+    name: Adrian Boafo
+    chamber: house
+    state: MD
+    district: 5
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/maryland-house-results
+    replaces: H000874
+    departureReason: retiring
+    calledBy: NBC
+    notes: Open seat; Hoyer not on ballot (retirement from background knowledge).
+
+  - fec: H6MI04204
+    name: Sean McCann
+    chamber: house
+    state: MI
+    district: 4
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/michigan
+    replaces: H001058
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC: McCann 50.1, Huizenga 48.3'
+
+  - fec: H6MI07298
+    name: William Lawrence
+    chamber: house
+    state: MI
+    district: 7
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/michigan
+    replaces: B001321
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC: Lawrence 51.0, Barrett 47.7'
+
+  - fec: H6MI10276
+    name: Christina Hines
+    chamber: house
+    state: MI
+    district: 10
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/michigan
+    replaces: J000307
+    departureReason: other-office
+    calledBy: AP
+
+  - fec: H6MI11191
+    name: Jeremy Moss
+    chamber: house
+    state: MI
+    district: 11
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/michigan
+    replaces: S001215
+    departureReason: other-office
+    calledBy: AP
+
+  - fec: H6MI13254
+    name: Donavan McKinney
+    chamber: house
+    state: MI
+    district: 13
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/michigan
+    replaces: T000488
+    departureReason: defeated
+    calledBy: AP
+
+  - fec: H6MN02230
+    name: Matt Little
+    chamber: house
+    state: MN
+    district: 2
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/minnesota
+    replaces: C001119
+    departureReason: other-office
+    calledBy: AP
+
+  - fec: H6MO02343
+    name: Fred Wellman
+    chamber: house
+    state: MO
+    district: 2
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/missouri
+    replaces: W000812
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC: Wellman 51.1, Wagner 46.2: https://www.nbcnews.com/politics/2026-elections/missouri-us-house-district-2-results'
+
+  - fec: H6MO06310
+    name: Chris Stigall
+    chamber: house
+    state: MO
+    district: 6
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/missouri
+    replaces: G000546
+    departureReason: retiring
+    calledBy: AP
+
+  - fec: H6MT01137
+    name: Sam Forstag
+    chamber: house
+    state: MT
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/montana-house-results
+    replaces: Z000018
+    departureReason: retiring
+    calledBy: NBC
+    notes: Forstag 50.3% vs Aaron Flint (R) 46.8% at 97% in. D gain.
+
+  - fec: H6NC06164
+    name: Cyril Jefferson
+    chamber: house
+    state: NC
+    district: 6
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/north-carolina-house-results
+    replaces: M001240
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'D flip; incumbent defeated in general. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina'
+
+  - fec: H6NC09218
+    name: Richard Ojeda II
+    chamber: house
+    state: NC
+    district: 9
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/north-carolina-house-results
+    replaces: H001067
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'D flip; incumbent defeated in general. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina'
+
+  - fec: H6NC11248
+    name: Jamie Ager
+    chamber: house
+    state: NC
+    district: 11
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/north-carolina-house-results
+    replaces: E000246
+    departureReason: other
+    calledBy: NBC
+    notes: 'Edwards ended his re-election bid Aug 5, 2026 after a House Ethics censure recommendation; Jennifer Balkcom (R) replaced him as nominee. D flip. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina'
+
+  - fec: H6NC13228
+    name: Paul Barringer
+    chamber: house
+    state: NC
+    district: 13
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/north-carolina-house-results
+    replaces: K000405
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'D flip; incumbent defeated in general. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina'
+
+  - fec: H6NC14069
+    name: Lakesha Womack
+    chamber: house
+    state: NC
+    district: 14
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/north-carolina-house-results
+    replaces: M001236
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'D flip; incumbent defeated in general. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina'
+
+  - fec: H6NE02174
+    name: Denise Powell
+    chamber: house
+    state: NE
+    district: 2
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/nebraska
+    replaces: B001298
+    departureReason: retiring
+    calledBy: AP
+
+  - fec: H6NH01321
+    name: Stefany Shaheen
+    chamber: house
+    state: NH
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/new-hampshire-house-results
+    replaces: P000614
+    departureReason: other-office
+    calledBy: NBC
+    notes: Pappas ran for U.S. Senate; reason from background knowledge, not re-verified this session.
+
+  - fec: H6NJ07201
+    name: Rebecca Bennett
+    chamber: house
+    state: NJ
+    district: 7
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/new-jersey-house-results
+    replaces: K000398
+    departureReason: defeated
+    calledBy: NBC
+    notes: NBC flags as flip; Bennett 57.1% vs Kean 41.4%.
+
+  - fec: H6NJ12417
+    name: Adam Hamawy
+    chamber: house
+    state: NJ
+    district: 12
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/new-jersey-house-results
+    replaces: W000822
+    departureReason: retiring
+    calledBy: NBC
+    notes: Open seat; Watson Coleman not on ballot (retirement reason from background knowledge).
+
+  - fec: H6NV02362
+    name: Teresa Benitez-Thompson
+    chamber: house
+    state: NV
+    district: 2
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/nevada-house-results
+    replaces: A000369
+    departureReason: retiring
+    calledBy: NBC
+    notes: She took 50.1% vs David Flippo (R) 44.5%. D gain.
+
+  - fec: H6NY07214
+    name: Claire Valdez
+    chamber: house
+    state: NY
+    district: 7
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/new-york-house-results
+    replaces: V000081
+    departureReason: retiring
+    calledBy: NBC
+    notes: Open seat; Velázquez not on ballot (retirement from background knowledge).
+
+  - fec: H6NY10176
+    name: Brad Lander
+    chamber: house
+    state: NY
+    district: 10
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/new-york-house-results
+    replaces: G000599
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'Goldman lost June 23 2026 primary to Lander (AP call: https://ny1.com/nyc/all-boroughs/politics/2026/06/24/nyc-june-2026-primary-10th-congressional-district-democratic-winner).'
+
+  - fec: H6NY12172
+    name: Micah Lasher
+    chamber: house
+    state: NY
+    district: 12
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/new-york-house-results
+    replaces: N000002
+    departureReason: retiring
+    calledBy: NBC
+    notes: Open seat; Nadler not on ballot (retirement from background knowledge).
+
+  - fec: H6NY13279
+    name: Darializa Avila Chevalier
+    chamber: house
+    state: NY
+    district: 13
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/new-york-house-results
+    replaces: E000297
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'Espaillat lost June 23 2026 primary (AP call: https://ny1.com/nyc/all-boroughs/politics/2026/06/24/nyc-june-2026-primary-13th-congressional-district-democratic-winner).'
+
+  - fec: H6OH07168
+    name: Brian Poindexter
+    chamber: house
+    state: OH
+    district: 7
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/ohio
+    replaces: M001222
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC Decision Desk also projects: https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-7-results'
+
+  - fec: H6OH15112
+    name: Don Leonard
+    chamber: house
+    state: OH
+    district: 15
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/ohio
+    replaces: C001126
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC: Leonard 51.9, Carey 45.3 (NBC not yet projecting): https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-15-results'
+
+  - fec: H6OK01235
+    name: Mark Tedford
+    chamber: house
+    state: OK
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/oklahoma-house-results
+    replaces: H001082
+    departureReason: other-office
+    calledBy: NBC
+    notes: 'Hern ran for U.S. Senate. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Oklahoma'
+
+  - fec: H6PA01181
+    name: Bob Harvie
+    chamber: house
+    state: PA
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/pennsylvania-house-results
+    replaces: F000466
+    departureReason: defeated
+    calledBy: NBC
+    notes: Harvie 52.7% vs Fitzpatrick 47.3%; also https://whyy.org/articles/election-2026-pennsylvania-congress-winners/
+
+  - fec: H6PA03203
+    name: Chris Rabb
+    chamber: house
+    state: PA
+    district: 3
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/pennsylvania-house-results
+    replaces: E000296
+    departureReason: retiring
+    calledBy: NBC
+    notes: Open seat; Evans not on ballot (retirement from background knowledge).
+
+  - fec: H6PA07188
+    name: Bob Brooks
+    chamber: house
+    state: PA
+    district: 7
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/pennsylvania-house-results
+    replaces: M001230
+    departureReason: defeated
+    calledBy: NBC
+
+  - fec: H6PA08293
+    name: Paige Cognetti
+    chamber: house
+    state: PA
+    district: 8
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/pennsylvania-house-results
+    replaces: B001327
+    departureReason: defeated
+    calledBy: NBC
+
+  - fec: H4PA10104
+    name: Janelle Stelson
+    chamber: house
+    state: PA
+    district: 10
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/pennsylvania-house-results
+    replaces: P000605
+    departureReason: defeated
+    calledBy: NBC
+
+  - fec: H6SC05202
+    name: Wes Climer
+    chamber: house
+    state: SC
+    district: 5
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/south-carolina-house-results
+    replaces: N000190
+    departureReason: other-office
+    calledBy: NBC
+    notes: 'Norman ran for governor (later U.S. Senate). NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_South_Carolina'
+
+  - fec: H6SD01109
+    name: Marty Jackley
+    chamber: house
+    state: SD
+    district: 0
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/south-dakota
+    replaces: J000301
+    departureReason: other-office
+    calledBy: AP
+
+  - fec: H6TN05405
+    name: Charlie Hatcher
+    chamber: house
+    state: TN
+    district: 5
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/tennessee-house-results
+    replaces: O000175
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'Ogles lost the Republican primary to Hatcher. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Tennessee'
+
+  - fec: H6TN06213
+    name: Johnny Garrett
+    chamber: house
+    state: TN
+    district: 6
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/tennessee-house-results
+    replaces: R000612
+    departureReason: other-office
+    calledBy: NBC
+    notes: 'Rose ran for governor. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Tennessee'
+
+  - fec: H6TX08175
+    name: Steve Toth
+    chamber: house
+    state: TX
+    district: 2
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: C001120
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'Crenshaw lost the Republican primary to Toth. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX08209
+    name: Jessica Hart Steinmann
+    chamber: house
+    state: TX
+    district: 8
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: L000603
+    departureReason: retiring
+    calledBy: NBC
+    notes: 'NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX09231
+    name: Leticia Gutierrez
+    chamber: house
+    state: TX
+    district: 9
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    calledBy: NBC
+    notes: 'Wikipedia lists this as a new seat (no incumbent): the old TX-9 (Al Green) was relocated to east Houston/Baytown. Green ran in the new TX-18 instead and is not returning (Menefee won TX-18). D win in a seat drawn to lean R. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX10221
+    name: Chris Gober
+    chamber: house
+    state: TX
+    district: 10
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: M001157
+    departureReason: retiring
+    calledBy: NBC
+    notes: 'NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX15246
+    name: Bobby Pulido
+    chamber: house
+    state: TX
+    district: 15
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: D000594
+    departureReason: defeated
+    calledBy: NBC
+    notes: 'D flip; incumbent defeated in general. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX19206
+    name: Tom Sell
+    chamber: house
+    state: TX
+    district: 19
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: A000375
+    departureReason: retiring
+    calledBy: NBC
+    notes: 'NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX21301
+    name: Mark Teixeira
+    chamber: house
+    state: TX
+    district: 21
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: R000614
+    departureReason: other-office
+    calledBy: NBC
+    notes: 'Roy ran for Texas Attorney General (lost primary). NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX22283
+    name: Trever Nehls
+    chamber: house
+    state: TX
+    district: 22
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: N000026
+    departureReason: retiring
+    calledBy: NBC
+    notes: "Winner is the incumbent's brother. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas"
+
+  - fec: H6TX23273
+    name: Katy Padilla Stout
+    chamber: house
+    state: TX
+    district: 23
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    calledBy: NBC
+    notes: 'Gonzales resigned in March 2026; seat absent from roster. D flip over Brandon Herrera (R). AP called it at 12:05 a.m. Nov 4 per Washington Examiner/TPR. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX30245
+    name: Frederick Haynes III
+    chamber: house
+    state: TX
+    district: 30
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: C001130
+    departureReason: other
+    calledBy: NBC
+    notes: 'Wikipedia labels the redrawn TX-30 a new seat; Crockett (old TX-30) was drawn into TX-33 and ran for U.S. Senate instead. Could arguably be null. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX32225
+    name: Jace Yarbrough
+    chamber: house
+    state: TX
+    district: 32
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    calledBy: NBC
+    notes: 'Wikipedia lists as a new seat (no incumbent). Old TX-32 incumbent Julie Johnson (D) was drawn out and ran in TX-33 (lost primary). Flagged as R gain by NBC. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H8TX32098
+    name: Colin Allred
+    chamber: house
+    state: TX
+    district: 33
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: J000310
+    departureReason: defeated
+    bioguide: A000376
+    calledBy: NBC
+    notes: 'Allred beat Rep. Julie Johnson (old TX-32) in the Democratic primary. Wikipedia names Jasmine Crockett as the incumbent of the redrawn TX-33, but she ran for U.S. Senate. Old TX-33 incumbent Marc Veasey (now in TX-25) retired. Allred is a former U.S. Rep. (TX-32, 2019-2025). NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX35095
+    name: Johnny Garcia
+    chamber: house
+    state: TX
+    district: 35
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    calledBy: NBC
+    notes: 'Wikipedia lists as a new seat (no incumbent). Old TX-35 incumbent Greg Casar was drawn into TX-37 and won re-election there. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H6TX02244
+    name: Jon Bonck
+    chamber: house
+    state: TX
+    district: 38
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/texas-house-results
+    replaces: H001095
+    departureReason: other-office
+    calledBy: NBC
+    notes: 'Hunt ran for U.S. Senate. NBC News Decision Desk projection. Incumbent/seat history: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas'
+
+  - fec: H8UT04053
+    name: Ben McAdams
+    chamber: house
+    state: UT
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/utah-house-results
+    replaces: O000086
+    departureReason: other
+    bioguide: M001209
+    calledBy: NBC
+    notes: New Salt Lake County district under the court-ordered map. By number UT-1 was Blake Moore's, but he ran in and won the new UT-2. Maloy and Kennedy also won new seats (3 and 4). The member who leaves is Burgess Owens (old UT-4), who retired. McAdams was the US Rep for UT-4 2019-2021. D gain.
+
+  - fec: H6VA01299
+    name: Shannon Taylor
+    chamber: house
+    state: VA
+    district: 1
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/virginia-house-results
+    replaces: W000804
+    departureReason: defeated
+    calledBy: NBC
+    notes: NBC state list shows Taylor projected (51.0% vs 48.7%), though NBC's national battleground widget did not show a check mark at fetch time. Same district numbering/incumbents as roster; no evidence of redistricting effect.
+
+  - fec: H6VA02198
+    name: Elaine Luria
+    chamber: house
+    state: VA
+    district: 2
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/virginia-house-results
+    replaces: K000399
+    departureReason: defeated
+    bioguide: L000591
+    calledBy: NBC
+    notes: Luria is former VA-2 Rep. (2019-2023), regaining seat. 53.0% vs 44.5%.
+
+  - fec: H6WI01283
+    name: Mitchell Berman
+    chamber: house
+    state: WI
+    district: 1
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/wisconsin
+    replaces: S001213
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC: Berman 52.0, Steil 48.0'
+
+  - fec: H4WI03169
+    name: Rebecca Cooke
+    chamber: house
+    state: WI
+    district: 3
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/wisconsin
+    replaces: V000135
+    departureReason: defeated
+    calledBy: AP
+    notes: 'NBC: Cooke 52.4, Van Orden 45.8'
+
+  - fec: H6WI07223
+    name: Michael Alfonso
+    chamber: house
+    state: WI
+    district: 7
+    status: projected
+    sourceUrl: https://www.foxnews.com/elections/2026/midterm-results/state/wisconsin
+    replaces: T000165
+    departureReason: other-office
+    calledBy: AP
+
+  - fec: H6WY00217
+    name: Chuck Gray
+    chamber: house
+    state: WY
+    district: 0
+    status: projected
+    sourceUrl: https://www.nbcnews.com/politics/2026-elections/wyoming-house-results
+    replaces: H001096
+    departureReason: other-office
+    calledBy: NBC
+    notes: Hageman ran for US Senate. Gray is Wyoming Secretary of State.
+uncalled:
+  - chamber: senate
+    state: AK
+    candidates: Mary Peltola (D) vs. Sen. Dan Sullivan (R, incumbent)
+    notes: 'Not projected by NBC or CBS. Peltola 48.2 to Sullivan 47.9 with about 74% in. Source: https://www.nbcnews.com/politics/2026-elections/senate-results'
+
+  - chamber: senate
+    state: MS
+    candidates: Scott Colom (D) vs. Sen. Cindy Hyde-Smith (R, incumbent)
+    notes: 'Too close to call. Colom led by about 1,724 votes (49.0-48.9) with about 96% in. Sources: https://www.nbcnews.com/politics/2026-elections/mississippi-senate-results , https://www.washingtonpost.com/elections/results/2026/11/03/mississippi-senate-live-updates/'
+
+  - chamber: house
+    state: AK
+    district: 0
+    candidates: Nick Begich (R, inc) 49.6%, Bill Hill (other) 40.4%, Eric Hafner (D) 7.3%
+    notes: 74% in. Alaska uses RCV. No NBC projection.
+
+  - chamber: house
+    state: AS
+    district: 0
+    candidates: Aumua Amata Coleman Radewagen (R, inc) reportedly won with 60.7%
+    notes: Only from search snippets; no major-desk call found and no source opened. Likely re-elected.
+
+  - chamber: house
+    state: AZ
+    district: 2
+    candidates: Eli Crane (R, inc) 49.5%, Jonathan Nez (D) 48.7%
+    notes: 86.5% in.
+
+  - chamber: house
+    state: AZ
+    district: 5
+    candidates: Mark Lamb (R) 51.2%, Elizabeth Lee (D) 48.8%
+    notes: 'Open seat: Andy Biggs ran for governor. A new member will win either way.'
+
+  - chamber: house
+    state: AZ
+    district: 6
+    candidates: JoAnna Mendoza (D) 53.0%, Juan Ciscomani (R, inc) 44.9%
+    notes: 84% in.
+
+  - chamber: house
+    state: AZ
+    district: 8
+    candidates: Abraham Hamadeh (R, inc) 51.5%, Bernadette Greene-Placentia (D) 48.5%
+
+  - chamber: house
+    state: CA
+    district: 4
+    candidates: Eric Jones (D) 51.6%, Mike Thompson (D, inc) 48.4%
+    notes: D-vs-D. 40.8% in.
+
+  - chamber: house
+    state: CA
+    district: 7
+    candidates: Doris Matsui (D, inc) 57.4%, Mai Vang (D) 42.6%
+    notes: D-vs-D. 41.1% in.
+
+  - chamber: house
+    state: CA
+    district: 11
+    candidates: Scott Wiener (D) 55.5%, Connie Chan (D) 44.5%
+    notes: 'Open seat: Pelosi retiring. A new member will win either way.'
+
+  - chamber: house
+    state: CA
+    district: 14
+    candidates: Aisha Wahab (D, inc) 56.5%, Melissa Hernandez (D) 43.5%
+    notes: Wahab is in the roster as CA-14.
+
+  - chamber: house
+    state: CA
+    district: 23
+    candidates: Jay Obernolte (R, inc) 51.4%, Tessa Hodge (D) 48.6%
+
+  - chamber: house
+    state: CA
+    district: 40
+    candidates: Ken Calvert (R, inc) 54.4%, Young Kim (R, inc) 45.6%
+    notes: Member-vs-member after Prop 50. Calvert (old CA-41) vs Kim (old CA-40). One incumbent leaves; no new member.
+
+  - chamber: house
+    state: CO
+    district: 3
+    candidates: Jeff Hurd (R, inc) 49.3%, Dwayne Romero (D) 47.5%
+    notes: 96.3% in.
+
+  - chamber: house
+    state: CO
+    district: 4
+    candidates: Eileen Laubacher (D) 48.7%, Lauren Boebert (R, inc) 48.0%
+    notes: 92.8% in.
+
+  - chamber: house
+    state: CO
+    district: 5
+    candidates: Jessica Killin (D) 50.6%, Jeff Crank (R, inc) 46.0%
+    notes: 94% in.
+
+  - chamber: house
+    state: FL
+    district: 7
+    candidates: Ryan Elijah (R) 49.7% vs Bale Dalton (D) 49.2%
+    notes: 'Open: Cory Mills lost primary. Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/florida-house-results'
+
+  - chamber: house
+    state: FL
+    district: 9
+    candidates: Darren Soto (D, inc.) 50.3% vs Dan Green (R) 49.7%
+    notes: 'Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/florida-house-results'
+
+  - chamber: house
+    state: FL
+    district: 13
+    candidates: Anna Paulina Luna (R, inc.) 49.5% vs Leela Gray (D) 48.7%
+    notes: 'Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/florida-house-results'
+
+  - chamber: house
+    state: FL
+    district: 26
+    candidates: Mario Diaz-Balart (R, inc.) 49.9% vs Nicole Locklin (D) 49.1%
+    notes: 'Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/florida-house-results'
+
+  - chamber: house
+    state: FL
+    district: 27
+    candidates: Maria Elvira Salazar (R, inc.) 50.2% vs Eliott Rodriguez (D) 49.8%
+    notes: 'Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/florida-house-results'
+
+  - chamber: house
+    state: GU
+    district: 0
+    candidates: Alicia Limtiaco (D) 51.0%, James Moylan (R, inc) 48.84%
+    notes: 'All precincts counted (unofficial); 662-vote margin. Moylan conceded (Pacific Island Times). No major-desk call found; NBC has no territory pages. Source: https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_election_in_Guam. Likely a new member (defeated incumbent).'
+
+  - chamber: house
+    state: LA
+    district: 5
+    candidates: Patricia Moore (D) 17.9% and Gabe Firment (R) 17.2% advance
+    notes: 'Open (Letlow ran for U.S. Senate). Heads to December runoff. Source: https://www.nbcnews.com/politics/2026-elections/louisiana-house-results'
+
+  - chamber: house
+    state: LA
+    district: 6
+    candidates: Chauna Banks (D) 19.4%, Blake Miguez (R) 19.2%, Rick Edmonds (R) 18.8%
+    notes: 'Incumbent Cleo Fields not among leaders. Runoff slots not yet projected. December runoff expected. Source: https://www.nbcnews.com/politics/2026-elections/louisiana-house-results'
+
+  - chamber: house
+    state: ME
+    district: 2
+    candidates: Paul LePage (R) 50.0% vs Matthew Dunlap (D) 48.9%
+    notes: Open seat (Jared Golden not running). 95.9% in per NBC; not projected.
+
+  - chamber: house
+    state: MN
+    district: 1
+    candidates: Jake Johnson (D) 49.99% vs Brad Finstad (R, inc.) 49.89%
+    notes: No call on Fox/AP at 98.79% reporting; https://www.foxnews.com/elections/2026/midterm-results/state/minnesota
+
+  - chamber: house
+    state: MP
+    district: 0
+    candidates: Kimberlyn King-Hinds (R, inc) reportedly won with 63.7%
+    notes: Only from search snippets; no major-desk call found and no source opened. Likely re-elected.
+
+  - chamber: house
+    state: NC
+    district: 3
+    candidates: Greg Murphy (R, inc.) 49.4% vs Raymond Smith (D) 49.3%
+    notes: 'Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/north-carolina-house-results'
+
+  - chamber: house
+    state: NC
+    district: 5
+    candidates: Virginia Foxx (R, inc.) 48.7% vs Chuck Hubbard (D) 48.7%
+    notes: 'Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/north-carolina-house-results'
+
+  - chamber: house
+    state: NC
+    district: 7
+    candidates: David Rouzer (R, inc.) 49.9% vs Kimberly Hardy (D) 49.1%
+    notes: 'Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/north-carolina-house-results'
+
+  - chamber: house
+    state: NJ
+    district: 2
+    candidates: Zack Mullock (D) 50.8% vs Jeff Van Drew (R, inc.) 48.2%
+    notes: 96.2% in per NBC; not projected. Would be a new member if Mullock wins.
+
+  - chamber: house
+    state: NY
+    district: 17
+    candidates: Cait Conley (D) 52.1% vs Mike Lawler (R, inc.) 47.7%
+    notes: Lawler conceded election night (https://thehill.com/homenews/campaign/6186171-lawley-concedes-new-york-house-race/) but NBC shows no projection at 87.6% in; reports say AP/DDHQ/CBS had not called it. Likely new member Conley.
+
+  - chamber: house
+    state: NY
+    district: 21
+    candidates: Anthony Constantino (R) 50.9% vs Blake Gendebien (D) 48.8%
+    notes: Open seat (Elise Stefanik not seeking reelection). 95.7% in per NBC; not projected. New member either way.
+
+  - chamber: house
+    state: OH
+    district: 10
+    candidates: Kristina Knickerbocker (D) 49.3% vs Mike Turner (R, inc.) 47.7%
+    notes: No call on Fox/AP or NBC at 97.5% in; https://www.nbcnews.com/politics/2026-elections/ohio-us-house-district-10-results
+
+  - chamber: house
+    state: SC
+    district: 1
+    candidates: Nancy Lacore (D) 49.7% vs Jenny Costa Honeycutt (R) 48.6%
+    notes: 'Open: Nancy Mace ran for governor. Not projected. Source: https://www.nbcnews.com/politics/2026-elections/south-carolina-house-results'
+
+  - chamber: house
+    state: SC
+    district: 2
+    candidates: Joe Wilson (R, inc.) 49.8% vs Zyon Khalifa (D) 48.8%
+    notes: 'Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/south-carolina-house-results'
+
+  - chamber: house
+    state: TN
+    district: 4
+    candidates: Victoria Broderick (D) 48.9% vs Scott DesJarlais (R, inc.) 48.7%
+    notes: 'Not projected by NBC. Source: https://www.nbcnews.com/politics/2026-elections/tennessee-house-results'
+
+  - chamber: house
+    state: TN
+    district: 9
+    candidates: Brent Taylor (R) 49.6% vs Justin Pearson (D) 48.5%
+    notes: 'Open: Steve Cohen withdrew in May 2026 after redistricting. Either way a new member. Source: https://www.nbcnews.com/politics/2026-elections/tennessee-house-results'
+
+  - chamber: house
+    state: VI
+    district: 0
+    candidates: Janelle Sarauw (D) ~76.9%, Shelley Moorhead (I) ~21.2%
+    notes: 'Open seat: Plaskett ran for and won VI governor. Unofficial results; no major-desk call found. Only seen in search results, not opened (e.g. https://viconsortium.com/vi-election/virgin-islands-janelle-sarauw-elected-delegate-to-congress-in-landslide--succeeding-stacey-plaskett). Likely a new member.'
+
+  - chamber: house
+    state: WA
+    district: 4
+    candidates: Amanda McKinney (R) 54.5%, John Duresky (D) 45.4%
+    notes: 'Open seat: Dan Newhouse retiring. A new member will win either way.'
+
+  - chamber: house
+    state: WA
+    district: 5
+    candidates: Michael Baumgartner (R, inc) 50.5%, Carmela Conroy (D) 49.2%

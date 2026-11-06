@@ -1,0 +1,180 @@
+# Statements on Islamophobia and antisemitism, researched 2026-11-05.
+#   -2: demeans Muslims or Jews as a group, uses antisemitic tropes, or treats
+#       Muslim officials as suspect for their faith.
+#   +1: a notable public stand against that bigotry.
+#   Not counted: criticism of Israel's government, anti-Zionism, or support for
+#   Palestinian rights (antisemitism); criticism of Hamas, ISIS, etc.
+#   (Islamophobia). Borderline cases are left out.
+# apologized: counts at half weight. quoteVerified: see `npm run verify:quotes`.
+
+statements:
+  - memberId: C001098
+    issue: not_antisemitic
+    stance: 1
+    date: 2025-10-30
+    sourceUrl: https://www.algemeiner.com/2025/10/31/ted-cruz-blasts-tucker-carlson-nick-fuentes-while-declaring-time-choosing-right-wing-antisemitism/
+    quote: In the last six months, I've seen more antisemitism on the right than I had in my entire life,
+    summary: At the Republican Jewish Coalition summit, Cruz repudiated Nick Fuentes and Tucker Carlson and called right-wing antisemitism 'a poison'.
+    quoteVerified: true
+  - memberId: G000565
+    issue: not_antisemitic
+    stance: -2
+    date: 2021-02-26
+    sourceUrl: https://www.newsweek.com/paul-gosar-defends-speaking-afpac-white-nationalist-organizer-1572607
+    quote: There is a group of young people that are becoming part of the election process, and becoming a bigger force
+    summary: Gosar headlined Nick Fuentes's America First Political Action Conference and defended doing so; he appeared again by video at AFPAC in 2022.
+    quoteVerified: false
+  - memberId: M001211
+    issue: not_antisemitic
+    stance: -2
+    date: 2021-01-05
+    sourceUrl: https://chicago.suntimes.com/politics/2021/1/8/22220744/illinois-republican-mary-miller-apologizes-remark-praising-hitler-trump-rally
+    quote: Hitler was right on one thing — that whoever has the youth has the future.
+    summary: At a Moms for America rally in Washington days after being sworn in, Miller praised Hitler on youth indoctrination.
+    apologized: true
+    quoteVerified: true
+  - memberId: T000486
+    issue: not_antisemitic
+    stance: 1
+    date: 2024-10-14
+    sourceUrl: https://ritchietorres.house.gov/posts/congressman-ritchie-torres-introduces-resolution-condemning-tucker-carlsons-interview-of-darryl-cooper
+    quote: Congress should stand for the proposition that America should have zero tolerance for antisemitism
+    summary: Torres introduced a House resolution condemning Tucker Carlson's interview of Darryl Cooper, which promoted Holocaust revisionism.
+    quoteVerified: true
+  - memberId: B000825
+    issue: not_islamophobic
+    stance: -2
+    date: 2021-11-17
+    sourceUrl: https://www.pbs.org/newshour/politics/house-responds-to-rep-boeberts-anti-muslim-remarks-with-islamophobia-bill
+    quote: jihad squad
+    summary: "Boebert derided Rep. Ilhan Omar as a member of the 'jihad squad' in House debate and, in a video, told a story about Omar in an elevator: 'Well, she doesn't have a backpack,' 'We should be fine.'"
+    apologized: true
+    quoteVerified: true
+  - memberId: F000484
+    issue: not_islamophobic
+    stance: -2
+    date: 2025-07-08
+    sourceUrl: https://san.com/cc/gop-congressman-calls-rep-omar-muslim-terrorist-amid-israel-row/
+    quote: I'm sure it is difficult to see us welcome the killer of so many of your fellow Muslim terrorists.
+    summary: Replying to Rep. Ilhan Omar's criticism of Netanyahu's visit, Fine referred to Muslim terrorists as Omar's 'fellow' Muslims.
+    quoteVerified: true
+  - memberId: F000484
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-02-15
+    sourceUrl: https://www.nbcnews.com/politics/congress/randy-fine-anti-muslim-post-on-x-dogs-calls-for-resignation-rcna259270
+    quote: If they force us to choose, the choice between dogs and Muslims is not a difficult one,
+    summary: Fine posted on X that he would choose dogs over Muslims, responding to an activist's post calling dogs unclean, and doubled down on Newsmax.
+    quoteVerified: true
+  - memberId: F000484
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-03-12
+    sourceUrl: https://www.nbcnews.com/politics/congress/multiple-house-republicans-post-openly-anti-muslim-statements-rcna263377
+    quote: We need more Islamophobia, not less. Fear of Islam is rational.
+    summary: Fine posted on X calling for more Islamophobia, part of a wave of anti-Muslim posts by House Republicans in March 2026.
+    quoteVerified: true
+  - memberId: G000603
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-03-12
+    sourceUrl: https://www.nbcnews.com/politics/congress/multiple-house-republicans-post-openly-anti-muslim-statements-rcna263377
+    quote: No more Muslims immigrating to America.
+    summary: Gill posted on X calling for a halt to all Muslim immigration, amid the March 2026 wave of GOP anti-Muslim posts.
+    quoteVerified: true
+  - memberId: M000194
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-08-07
+    sourceUrl: https://www.foxnews.com/politics/dems-hammer-mace-saying-all-muslims-public-office-trojan-horse
+    quote: Every single Muslim holding public office in America is a trojan horse
+    summary: After Abdul El-Sayed won Michigan's Democratic Senate primary, Mace posted on X that every Muslim officeholder is a trojan horse and a threat to the republic.
+    quoteVerified: true
+  - memberId: M000194
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-08-09
+    sourceUrl: https://www.foxnews.com/politics/dems-hammer-mace-saying-all-muslims-public-office-trojan-horse
+    quote: Islam must be confronted and Islam must be removed from civil society in the US.
+    summary: Replying to Rep. Pramila Jayapal's criticism of her trojan-horse post, Mace called for Islam to be removed from US civil society.
+    quoteVerified: true
+  - memberId: M000317
+    issue: not_islamophobic
+    stance: 1
+    date: 2025-06-27
+    sourceUrl: https://ny1.com/nyc/all-boroughs/politics/2025/06/27/gop-lawmakers-in-congress-hurl-islamophobic-attacks-at-zohran-mamdani-following-his-primary-win
+    quote: I think they are terrible comments. They're just not, they're not productive.
+    summary: Malliotakis, a Republican, publicly criticized fellow Republicans' anti-Muslim attacks on Mamdani; in March 2026 she also called Ogles-style broad statements offensive (per NBC).
+    quoteVerified: true
+  - memberId: O000173
+    issue: not_islamophobic
+    stance: 1
+    date: 2021-12-14
+    sourceUrl: https://www.pbs.org/newshour/politics/house-responds-to-rep-boeberts-anti-muslim-remarks-with-islamophobia-bill
+    quote: As Americans we should stand united against all forms of bigotry.
+    summary: Omar led the Combating International Islamophobia Act, which passed the House 219-212 after Boebert's anti-Muslim remarks.
+    quoteVerified: true
+  - memberId: O000175
+    issue: not_islamophobic
+    stance: -2
+    date: 2025-06-26
+    sourceUrl: https://www.newsweek.com/house-republican-wants-zohran-mamdani-deported-2091362
+    quote: little muhammad ... He needs to be DEPORTED ... Which is why I am calling for him to be subject to denaturalization proceedings.
+    summary: Ogles called Zohran Mamdani 'little muhammad' on X and asked the Attorney General to pursue denaturalization and deportation after Mamdani's primary win.
+    quoteVerified: true
+  - memberId: O000175
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-03-09
+    sourceUrl: https://www.nbcnews.com/politics/congress/andy-ogles-sparks-backlash-saying-muslims-dont-belong-america-rcna262575
+    quote: Muslims don't belong in American society
+    summary: Ogles posted on X that Muslims don't belong in American society and that 'Pluralism is a lie', then followed up with dozens of further posts.
+    quoteVerified: true
+  - memberId: R000614
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-03-29
+    sourceUrl: https://www.yahoo.com/news/articles/chip-roy-draws-backlash-no-155119966.html
+    quote: No more Muslims. No more criminals. No more Marxists,
+    summary: Roy, co-founder of the Sharia Free America Caucus, posted on X 'No more Muslims' alongside criminals and Marxists.
+    quoteVerified: true
+  - memberId: S001224
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-08-04
+    sourceUrl: https://www.michiganpublic.org/politics-government/2026-08-13/as-abdul-el-sayed-breaks-a-barrier-anti-muslim-vitriol-surges-on-multiple-fronts
+    quote: Child marriage. Honor killings. Don't tell me it can't happen here.
+    summary: At a McKinney, Texas city council hearing, Self urged rejection of a mosque proposal, warning of child marriage and honor killings and that 'the intimidation phase follows quickly'.
+    quoteVerified: true
+  - memberId: T000278
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-03-12
+    sourceUrl: https://www.huffpost.com/entry/tommy-tuberville-anti-muslim-post_n_69b35017e4b0a41ddfc53944
+    quote: The enemy is inside the gates.
+    summary: Tuberville captioned a side-by-side image of the 9/11 attacks and Mayor Mamdani at an iftar with 'The enemy is inside the gates'; he had used the same line in December 2025 about Mamdani's Quran swearing-in.
+    quoteVerified: false
+  - memberId: T000278
+    issue: not_islamophobic
+    stance: -2
+    date: 2026-03-17
+    sourceUrl: https://www.foxnews.com/politics/tuberville-defends-post-likening-mamdani-9-11-attacks-i-just-go-his-rhetoric
+    quote: If you teach and preach Sharia law, if you bow down to the Quran, it teaches death to Americans.
+    summary: Defending his Mamdani/9-11 post in an interview, Tuberville said that bowing to the Quran teaches death to Americans; Fox also quotes his X post that 'the Quran is pretty CLEAR on its instructions to KILL all non-Muslims'.
+    quoteVerified: true
+  - memberId: T000486
+    issue: not_islamophobic
+    stance: 1
+    date: 2025-06-27
+    sourceUrl: https://ny1.com/nyc/all-boroughs/politics/2025/06/27/gop-lawmakers-in-congress-hurl-islamophobic-attacks-at-zohran-mamdani-following-his-primary-win
+    quote: should speak out with moral clarity against the despicable Islamophobic attacks
+    summary: Torres, a strong critic of Mamdani, publicly called out colleagues' Islamophobic attacks on Mamdani after his primary win.
+    quoteVerified: true
+  - memberId: T000488
+    issue: not_islamophobic
+    stance: 1
+    date: 2025-06-27
+    sourceUrl: https://thanedar.house.gov/media/press-releases/congressman-shri-thanedar-introduces-censure-resolution-against-representative-andy-ogles-for-anti-immigrant-remarks
+    quote: Representative Ogle's actions are completely unacceptable, and he should be censured.
+    summary: Thanedar introduced a resolution to censure Ogles after Ogles called Mamdani 'little Muhammad' and sought his deportation; NBC reports he introduced another censure of Ogles in March 2026.
+    quoteVerified: true

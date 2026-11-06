@@ -1,0 +1,7 @@
+node_modules
+dist
+*.tsbuildinfo
+package-lock.json
+.venv
+data/raw
+public/data

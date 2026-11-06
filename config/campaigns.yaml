@@ -1,0 +1,304 @@
+# Citizen campaigns. Ingest resolves audiences and writes campaigns.json.
+#
+# audience.session: current | incoming (non-departing members + members-elect).
+#   Membership is by caucus, so caucusing independents count.
+# threshold.kind:
+#   block-floor-majority: audience - floor(chamberSize/2) committed members
+#   caucus-majority: majority of the audience
+# threshold.partialAt: default half of what's needed.
+# positions[].stance: committed | leaning | undecided (default) | opposed
+#   (backs the target). Strict rule: "committed" needs an explicit "won't vote
+#   for them"; calls for new leadership, conditional pledges, and outlets'
+#   characterizations are "leaning". Use the latest statement.
+#   quoteVerified: set by `npm run verify:quotes -- --write`.
+# milestones[].status: pending | met | missed. outcome: open | success |
+#   partial | failure.
+
+campaigns:
+  - id: no-jeffries-speaker
+    title: House Democrats, don't vote for Jeffries as Speaker
+    ask: Publicly commit not to vote for Hakeem Jeffries for Speaker of the House.
+    goal: >-
+      Hakeem Jeffries is not elected Speaker of the House in the 120th Congress.
+    audience:
+      chamber: house
+      caucus: Democrat
+      session: incoming
+      description: The incoming House Democratic Caucus (120th Congress)
+    threshold:
+      kind: block-floor-majority
+      chamberSize: 435
+    successCriteria: Jeffries is not elected Speaker.
+    partialCriteria: >-
+      Jeffries is elected, but only after more than one ballot, or after the partial threshold of members publicly withheld support.
+    failureCriteria: Jeffries is elected Speaker on the first ballot.
+    outcome: open
+    notes: >-
+      The Speaker is elected by public roll call on the House floor when the new Congress convenes, so the final vote can be checked against commitments. Delegates don't vote for Speaker; the threshold counts voting members only.
+    milestones:
+      - id: caucus-settled
+        title: Incoming caucus settled
+        description: All House races called, so the audience is final.
+        status: pending
+      - id: first-commitment
+        title: First member publicly commits
+        status: pending
+      - id: caucus-nomination
+        title: Jeffries not chosen as the caucus nominee for Speaker
+        description: House Democrats choose their Speaker nominee in caucus leadership elections. Bloomberg Government reports Nov. 18–19 and Punchbowl reports Nov. 18; Fox News reports mid-December. Jeffries announced his candidacy on Nov. 4, and no challenger has declared.
+        status: pending
+        date: 2026-11-18
+        sourceUrl: https://news.bgov.com/bloomberg-government-news/house-democratic-leadership-elections-set-for-nov-18-and-19
+      - id: partial-threshold
+        title: Partial threshold of public commitments reached
+        status: pending
+      - id: blocking-threshold
+        title: Enough public commitments to block a first-ballot win
+        status: pending
+      - id: floor-vote
+        title: Jeffries not elected Speaker on the floor
+        date: '2027-01-03'
+        status: pending
+        sourceUrl: https://www.wsiu.org/politics-elections/2026-11-04/hakeem-jeffries-is-poised-to-become-the-first-black-speaker-of-the-house
+    positions:
+      - memberId: elect-H2IA02111
+        stance: leaning
+        date: 2026-06-10
+        sourceUrl: https://www.washingtonexaminer.com/news/campaigns/congressional/4603168/house-democratic-candidates-noncommittal-jeffries-leading-house/
+        quote: Likewise, Iowa’s 1st congressional Democratic nominee Christina Bohannan is also noncommittal, merely responding “I don’t know yet. I haven’t made that decision,” when asked by Punchbowl News if she would support Jeffries.
+        quoteVerified: true
+      - memberId: elect-H6CA34286
+        stance: leaning
+        date: 2026-10-08
+        sourceUrl: https://web.archive.org/web/20261018192952/https://www.axios.com/2026/10/08/california-house-elections-democrats-jeffries
+        quote: Gonzales-Torres, asked in an interview with Axios if she would vote for Jeffries as speaker, said she looks forward to "supporting leaders who are not nearly funded by corporate super PACs."
+        quoteVerified: true
+      - memberId: elect-H6CO01273
+        stance: leaning
+        date: 2026-11-04
+        sourceUrl: https://www.cbsnews.com/news/democrats-win-house-majority/
+        quote: Rep.-elect Melat Kiros, who will represent Colorado come January, told CBS News she's had "wonderful conversations" with Jeffries. But when asked whether she would support him for speaker, she declined to give a definitive answer.
+        quoteVerified: true
+      - memberId: elect-H6IL09228
+        stance: leaning
+        date: 2026-11-04
+        sourceUrl: https://evanstonnow.com/biss-promises-trump-accountability/
+        quote: He has not committed to supporting anyone for House Speaker thus far, saying he would wait until he knows who’s running for the job, which will likely include the current minority leader, Rep. Hakeem Jeffries of New York, though some Democrats have said they do not plan on supporting Jeffries as speaker.
+        quoteVerified: true
+      - memberId: elect-H6MI13254
+        stance: leaning
+        date: 2026-11-03
+        sourceUrl: https://www.ms.now/news/dsa-democratic-socialists-house-2026-midterm-elections
+        quote: McKinney has also withheld his support. He told The Wall Street Journal last month that he and Jeffries had spoken by phone and planned to meet in person. “This is about receiving assurances that we can push legislation that our communities need,” McKinney told the Journal.
+        quoteVerified: true
+      - memberId: elect-H6MT01137
+        stance: leaning
+        date: 2026-06-10
+        sourceUrl: https://www.washingtonexaminer.com/news/campaigns/congressional/4603168/house-democratic-candidates-noncommittal-jeffries-leading-house/
+        quote: “I’m not committing to anyone one way or the other,” Forstag told Punchbowl News. “I will stand with whoever will stand with working people in this state.”
+        quoteVerified: true
+      - memberId: elect-H6NJ12417
+        stance: leaning
+        date: 2026-03-16
+        sourceUrl: https://web.archive.org/web/20261013123635/https://www.axios.com/2026/03/16/hakeem-jeffries-speaker-house-democratic-primaries
+        quote: '"Most Democrats are agreed that he''s been failing to meet the moment," said Adam Hamawy, a candidate in New Jersey''s 12th district, saying he is "looking for someone that''s gonna stand up to the administration."'
+        quoteVerified: true
+      - memberId: elect-H6NY07214
+        stance: leaning
+        date: 2026-11-03
+        sourceUrl: https://www.ms.now/news/dsa-democratic-socialists-house-2026-midterm-elections
+        quote: Valdez was noncommittal. “I’m not committed to voting yes or no,” she told MS NOW.
+        quoteVerified: true
+      - memberId: elect-H6NY13279
+        stance: leaning
+        date: 2026-11-03
+        sourceUrl: https://www.ms.now/news/dsa-democratic-socialists-house-2026-midterm-elections
+        quote: Supporting Jeffries for speaker is “something I’m still thinking about and talking to my community about,” Darializa Avila Chevalier, who is running in New York’s 13th District and ousted Rep. Adriano Espaillat in the June primary, told MS NOW.
+        quoteVerified: true
+      - memberId: elect-H6OH15112
+        stance: leaning
+        date: 2026-11-05
+        sourceUrl: https://www.yahoo.com/news/politics/articles/knew-winnable-don-leonard-flipping-043532192.html
+        quote: '"If Hakeem Jeffries is willing to get on board with that agenda, then I''d be very open to it. If not, I''ll be shopping for a new leader," Leonard said.'
+        quoteVerified: true
+      - memberId: elect-H6PA03203
+        stance: leaning
+        date: 2026-11-04
+        sourceUrl: https://www.cbsnews.com/news/democrats-win-house-majority/
+        quote: Rep.-elect Chris Rabb of Pennsylvania also declined to say whether Jeffries had his backing.
+        quoteVerified: true
+      - memberId: elect-H6VA01299
+        stance: leaning
+        date: 2026-11-04
+        sourceUrl: https://www.wtvr.com/news/local-news/shannon-taylor-whats-next-nov-4-2026
+        quote: But Taylor would not commit to endorsing Minority Leader Hakeem Jeffries as the next Speaker of the House.
+        quoteVerified: true
+      - memberId: M001246
+        stance: leaning
+        date: 2026-10-28
+        sourceUrl: https://www.levernews.com/the-progressive-revolt-stops-at-hakeem-jeffries/
+        quote: Other progressives who haven’t yet publicly backed Jeffries include Valdez and Darializa Avila Chevalier in New York and Rep. Analilia Mejia in New Jersey.“No king in the White House, no king in the House,” Mejia told The Lever last month when asked about the speakership.
+        quoteVerified: true
+      - memberId: C001131
+        stance: opposed
+        date: 2026-10-28
+        sourceUrl: https://www.levernews.com/the-progressive-revolt-stops-at-hakeem-jeffries/
+        quote: “The progressive caucus has a long history of working with the speaker of the House, and I expect we will do the same thing with Speaker Jeffries,” Casar said.
+        quoteVerified: true
+      - memberId: elect-H6CT01206
+        stance: opposed
+        date: 2026-07-08
+        sourceUrl: https://web.archive.org/web/20261009213446/https://www.axios.com/2026/07/08/democrats-jeffries-primaries-speaker-vote-dsa
+        quote: 'Luke Bronin, who is primarying Rep. John Larson (D-Conn.), has also become supportive since the fall, telling Axios: "We should not start our majority by fighting over who should be speaker."'
+        quoteVerified: true
+      - memberId: elect-H6MI07298
+        stance: opposed
+        date: 2026-09-30
+        sourceUrl: https://www.washingtonsun.com/congress/hakeem-jeffries-speaker-progressive-support
+        quote: William Lawrence, a progressive House candidate from Michigan who previously said he hoped to be able to vote for a Jeffries alternative for speaker, has since thrown his support behind the New Yorker.
+        quoteVerified: true
+      - memberId: elect-H6NJ07201
+        stance: opposed
+        date: 2026-10-09
+        sourceUrl: https://newjerseyglobe.com/congress/bennett-says-she-would-back-jeffries-for-house-speaker/
+        quote: “Yes, I will vote for him, but I’ve got to win first,” Bennett said following an event with Jeffries at Greater Mount Moriah Church in Linden.
+        quoteVerified: false
+      - memberId: elect-H6NY10176
+        stance: opposed
+        date: 2026-07-21
+        sourceUrl: https://www.notus.org/congress/hakeem-jeffries-progressives-democrats-brad-lander
+        quote: “I look forward to voting for Hakeem to be the speaker of the House,” Lander said in a recent interview with NOTUS.
+        quoteVerified: true
+      - memberId: elect-H6NY12172
+        stance: opposed
+        date: 2026-06-09
+        sourceUrl: https://www.jta.org/2026/06/09/ny/micah-lasher-says-he-is-exhausted-by-focus-on-israel-in-ny-12-race
+        quote: Lasher and Timmins both said they would support keeping New York Rep. Hakeem Jeffries as the Democrats’ leader in the House of Representatives.
+        quoteVerified: true
+      - memberId: elect-H6TX35095
+        stance: opposed
+        date: 2026-10-27
+        sourceUrl: https://www.yahoo.com/news/politics/articles/why-jeffries-other-top-democrats-090313137.html
+        quote: '"I''m going to stand with our leader when he is sworn in as the speaker for the US House of Representatives."'
+        quoteVerified: true
+      - memberId: O000172
+        stance: opposed
+        date: 2026-11-03
+        sourceUrl: https://www.ms.now/news/dsa-democratic-socialists-house-2026-midterm-elections
+        quote: Ocasio-Cortez has since endorsed Jeffries for speaker, The Wall Street Journal reported.
+        quoteVerified: true
+
+  - id: no-schumer-leader
+    title: Senate Democrats, don't vote for Schumer as Majority Leader
+    ask: >-
+      Publicly commit not to vote for Chuck Schumer as Senate Democratic leader.
+    goal: >-
+      Chuck Schumer is not chosen as Senate Majority Leader in the 120th Congress.
+    audience:
+      chamber: senate
+      caucus: Democrat
+      session: incoming
+      description: The incoming Senate Democratic Caucus (120th Congress), including independents who caucus with it
+    threshold:
+      kind: caucus-majority
+    successCriteria: Schumer is not elected Democratic leader.
+    partialCriteria: >-
+      Schumer is elected, but faces a challenger who forces a contested vote, or the partial threshold of senators publicly withheld support.
+    failureCriteria: Schumer is elected leader without a contested vote.
+    outcome: open
+    notes: >-
+      Senate Democrats choose their leader in a caucus election, usually by secret ballot, so progress can only be tracked through public statements, not the final vote.
+    milestones:
+      - id: caucus-settled
+        title: Incoming caucus settled
+        description: All Senate races called, so the audience is final.
+        status: pending
+      - id: first-commitment
+        title: First senator publicly commits
+        status: met
+        date: 2026-03-18
+        description: Juliana Stratton, then a Senate candidate in Illinois, said she would not support Schumer as leader.
+        sourceUrl: https://www.mediaite.com/politics/dick-durbins-likely-senate-replacement-explains-why-she-wont-support-schumer-as-leader/
+      - id: challenger
+        title: A challenger declares for leader
+        status: pending
+        description: As of Nov. 4, no senator has declared a challenge. Politico reports Adam Schiff is interested in a leadership bid; Chris Van Hollen says a run "has just not been my focus."
+        sourceUrl: https://www.foxnews.com/politics/chuck-schumer-sweeping-democratic-midterm-victories-reelected-majority-leader
+      - id: partial-threshold
+        title: Partial threshold of public commitments reached
+        status: pending
+      - id: majority-committed
+        title: A majority of the caucus publicly committed
+        status: pending
+      - id: leadership-election
+        title: Schumer not elected Democratic leader
+        status: pending
+        description: Expected in early December, by secret ballot, with senators-elect voting; Schumer needs a simple majority. Schumer has said he is running.
+        sourceUrl: https://rollcall.com/2026/11/04/will-be-reelected-as-majority-leader-schumer-says/
+    positions:
+      - memberId: elect-S6IL00458
+        stance: committed
+        date: 2026-11-04
+        sourceUrl: https://rollcall.com/2026/11/04/will-be-reelected-as-majority-leader-schumer-says/
+        quote: I've made it clear that I would not support Chuck Schumer as leader of the Democratic caucus.
+        quoteVerified: true
+      - memberId: elect-S6KS00312
+        stance: committed
+        date: 2026-11-04
+        sourceUrl: https://rollcall.com/2026/11/04/will-be-reelected-as-majority-leader-schumer-says/
+        quote: I'm not supporting Schumer for leader.
+        quoteVerified: true
+      - memberId: elect-S6ME00464
+        stance: committed
+        date: 2026-11-04
+        sourceUrl: https://www.pressherald.com/2026/11/04/troy-jackson-wont-back-chuck-schumer-will-that-affect-his-influence/
+        quote: I've told Sen. Schumer I'm going to support somebody else, so it's no different now.
+        quoteVerified: true
+      - memberId: elect-S6MI00418
+        stance: leaning
+        date: 2026-11-04
+        sourceUrl: https://www.timesofisrael.com/liveblog_entry/el-sayed-declines-to-say-hell-back-schumer-for-senate-majority-leader/
+        quote: I do believe we need new leadership and I think people are hungry for it.
+        quoteVerified: false
+      - memberId: elect-S6MN00440
+        stance: leaning
+        date: 2026-11-04
+        sourceUrl: https://www.minnpost.com/elections/2026/11/flanagan-wants-democrats-to-replace-chuck-schumer-as-senate-leader/
+        quote: I am tremendously grateful for Chuck Schumer's leadership, but I think it's time for new leadership,
+        quoteVerified: true
+      - memberId: elect-S6NH00141
+        stance: leaning
+        date: 2026-11-04
+        sourceUrl: https://rollcall.com/2026/11/04/will-be-reelected-as-majority-leader-schumer-says/
+        quote: it's very clear voters are hungry for new voices at the table and for a new generation of leadership in the Senate
+        quoteVerified: true
+      - memberId: elect-S6TX00479
+        stance: leaning
+        date: 2025-09-09
+        sourceUrl: https://punchbowl.news/article/campaigns/talarico-pitch/
+        quote: Talarico refused to say whether he'd support Senate Minority Leader Chuck Schumer
+        quoteVerified: false
+      - memberId: S001208
+        stance: leaning
+        date: 2026-06-25
+        sourceUrl: https://www.aol.com/articles/senate-democrat-suggests-may-time-235008195.html
+        quote: I'm saying that if people can't recognize that the game has fundamentally changed and can't adapt, then they need to make room for others who can.
+        quoteVerified: true
+      - memberId: V000128
+        stance: leaning
+        date: 2026-11-04
+        sourceUrl: https://www.aa.com.tr/en/americas/democrat-van-hollen-demands-bold-agenda-before-backing-schumer-for-senate-leader-report/4112128
+        quote: No one should be committing to anybody as the next Democratic leader without having that conversation,
+        quoteVerified: false
+      - memberId: A000382
+        stance: opposed
+        date: 2026-11-02
+        sourceUrl: https://www.yahoo.com/news/politics/articles/chuck-schumer-leadership-hopes-run-094500215.html
+        quote: Sen. Angela Alsobrooks (D-Md.) also told POLITICO that she is supporting Schumer,
+        quoteVerified: true
+      - memberId: W000802
+        stance: opposed
+        date: 2026-11-02
+        sourceUrl: https://www.yahoo.com/news/politics/articles/chuck-schumer-leadership-hopes-run-094500215.html
+        quote: Schumer delivering a Democratic Senate certainly justifies another term as leader,
+        quoteVerified: true
