@@ -289,7 +289,7 @@ campaigns:
         date: 2026-11-04
         sourceUrl: https://www.aa.com.tr/en/americas/democrat-van-hollen-demands-bold-agenda-before-backing-schumer-for-senate-leader-report/4112128
         quote: No one should be committing to anybody as the next Democratic leader without having that conversation,
-        quoteVerified: false
+        quoteVerified: true
       - memberId: A000382
         stance: opposed
         date: 2026-11-02
