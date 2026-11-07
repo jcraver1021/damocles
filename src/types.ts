@@ -107,7 +107,8 @@ export type EvidenceKind =
   | 'interview'
   | 'website'
   | 'rating'
-  | 'finance';
+  | 'finance'
+  | 'pledge';
 
 /** -2 (opposed) to +2 (aligned). */
 export type Stance = number;
@@ -160,6 +161,8 @@ export interface IssueScore {
   evidenceCount: number;
   /** Statements and actions disagree. */
   saysVsDoesGap: boolean;
+  /** Based only on words (statements, interviews), no actions. */
+  provisional: boolean;
 }
 
 // ---- Rubric (config/rubric.yaml documents each field) ----

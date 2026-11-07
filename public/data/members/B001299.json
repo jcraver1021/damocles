@@ -2605,6 +2605,21 @@
       }
     },
     {
+      "id": "bill:hres319-118:B001299:climate:absent",
+      "memberId": "B001299",
+      "issue": "climate",
+      "kind": "sponsorship",
+      "stance": -2,
+      "absence": true,
+      "summary": "Didn't sign on to Green New Deal resolution (H.Res. 319)",
+      "sourceUrl": "https://www.congress.gov/bill/118th-congress/house-resolution/319/cosponsors",
+      "sourceDate": "2025-01-03",
+      "method": "deterministic",
+      "confidence": 1,
+      "weight": 0.25,
+      "reviewed": true
+    },
+    {
       "id": "bill:s1503-119:B001299:lgbtqia:absent",
       "memberId": "B001299",
       "issue": "lgbtqia",
@@ -2873,6 +2888,21 @@
       "reviewed": true
     },
     {
+      "id": "bill:hres786-118:B001299:pro_palestine:absent",
+      "memberId": "B001299",
+      "issue": "pro_palestine",
+      "kind": "sponsorship",
+      "stance": -2,
+      "absence": true,
+      "summary": "Didn't sign on to Gaza ceasefire resolution (H.Res. 786)",
+      "sourceUrl": "https://www.congress.gov/bill/118th-congress/house-resolution/786/cosponsors",
+      "sourceDate": "2025-01-03",
+      "method": "deterministic",
+      "confidence": 1,
+      "weight": 0.25,
+      "reviewed": true
+    },
+    {
       "id": "bill:sres852-119:B001299:pro_palestine:absent",
       "memberId": "B001299",
       "issue": "pro_palestine",
@@ -3019,124 +3049,154 @@
       "confidence": 1,
       "weight": 0.25,
       "reviewed": true
+    },
+    {
+      "id": "pledge:atr-taxpayer-protection:B001299",
+      "memberId": "B001299",
+      "issue": "progressive_taxation",
+      "kind": "pledge",
+      "stance": -2,
+      "summary": "Signed the Taxpayer Protection Pledge (Americans for Tax Reform): Signers pledge to oppose any and all efforts to increase marginal income tax rates for individuals and businesses, and to oppose any net reduction or elimination of deductions and credits unless matched dollar for dollar by further rate reductions.",
+      "sourceUrl": "https://atr.org/pledge-database/?office-filter=4696",
+      "sourceDate": "2026-11-06",
+      "method": "human",
+      "confidence": 1,
+      "reviewed": true
     }
   ],
   "scores": [
     {
       "issue": "money_in_politics",
       "score": null,
-      "coverage": 0.15879587961890818,
+      "provisional": false,
+      "coverage": 0.15879282875011547,
       "evidenceCount": 1,
       "saysVsDoesGap": false
     },
     {
       "issue": "climate",
       "score": -1,
-      "coverage": 0.5374164514969586,
-      "evidenceCount": 3,
+      "provisional": false,
+      "coverage": 0.5616750709119485,
+      "evidenceCount": 4,
       "saysVsDoesGap": false
     },
     {
       "issue": "immigration",
       "score": -1,
-      "coverage": 0.5061687068850309,
+      "provisional": false,
+      "coverage": 0.5061613990225976,
       "evidenceCount": 4,
       "saysVsDoesGap": false
     },
     {
       "issue": "lgbtqia",
-      "score": -0.9889377066279172,
-      "coverage": 0.6404499429287531,
+      "score": -0.9889377066279174,
+      "provisional": false,
+      "coverage": 0.6404422290685274,
       "evidenceCount": 6,
       "saysVsDoesGap": false
     },
     {
       "issue": "science",
       "score": -1,
-      "coverage": 0.32682511181200125,
+      "provisional": false,
+      "coverage": 0.32681952422194693,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
     {
       "issue": "economic_wellbeing",
       "score": -1,
-      "coverage": 0.5036735130755224,
+      "provisional": false,
+      "coverage": 0.5036662207545253,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "voting_rights",
       "score": -1,
-      "coverage": 0.5633184370381699,
+      "provisional": false,
+      "coverage": 0.5633108484380701,
       "evidenceCount": 6,
       "saysVsDoesGap": false
     },
     {
       "issue": "accountability",
       "score": -1,
-      "coverage": 0.7806422272809153,
+      "provisional": false,
+      "coverage": 0.7806352476259862,
       "evidenceCount": 9,
       "saysVsDoesGap": false
     },
     {
       "issue": "progressive_taxation",
       "score": -1,
-      "coverage": 0.672171148794464,
-      "evidenceCount": 8,
+      "provisional": false,
+      "coverage": 0.7315715744014383,
+      "evidenceCount": 9,
       "saysVsDoesGap": false
     },
     {
       "issue": "universal_healthcare",
       "score": -1,
-      "coverage": 0.3018188903213901,
+      "provisional": false,
+      "coverage": 0.30181362926927335,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "universal_childcare",
       "score": -1,
-      "coverage": 0.4707388677492075,
+      "provisional": false,
+      "coverage": 0.4707318047298854,
       "evidenceCount": 5,
       "saysVsDoesGap": false
     },
     {
       "issue": "education",
       "score": -1,
-      "coverage": 0.3001490835239946,
+      "provisional": false,
+      "coverage": 0.3001438449533016,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "amnesty",
       "score": null,
-      "coverage": 0.21369407761254422,
+      "provisional": false,
+      "coverage": 0.2136901128446852,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
     {
       "issue": "transgender",
       "score": -1,
-      "coverage": 0.5407379992277509,
+      "provisional": false,
+      "coverage": 0.5407305038684258,
       "evidenceCount": 4,
       "saysVsDoesGap": false
     },
     {
       "issue": "pro_palestine",
       "score": -1,
-      "coverage": 0.9622009085321706,
-      "evidenceCount": 14,
+      "provisional": false,
+      "coverage": 0.964181271718222,
+      "evidenceCount": 15,
       "saysVsDoesGap": false
     },
     {
       "issue": "not_islamophobic",
       "score": -1,
-      "coverage": 0.17245553424698212,
+      "provisional": false,
+      "coverage": 0.17245224876388277,
       "evidenceCount": 1,
       "saysVsDoesGap": false
     },
     {
       "issue": "not_antisemitic",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -3144,27 +3204,31 @@
     {
       "issue": "oppose_iran_war",
       "score": -1,
-      "coverage": 0.9916043432703601,
+      "provisional": false,
+      "coverage": 0.9916035015228982,
       "evidenceCount": 16,
       "saysVsDoesGap": false
     },
     {
       "issue": "demilitarize",
       "score": -1,
-      "coverage": 0.9030279795773929,
+      "provisional": false,
+      "coverage": 0.903023233798207,
       "evidenceCount": 12,
       "saysVsDoesGap": false
     },
     {
       "issue": "food_drug_oversight",
       "score": -0.5482175945505694,
-      "coverage": 0.6756070540479229,
+      "provisional": false,
+      "coverage": 0.6755993943537488,
       "evidenceCount": 5,
       "saysVsDoesGap": false
     },
     {
       "issue": "targeted_bills",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -3172,21 +3236,24 @@
     {
       "issue": "pro_labor",
       "score": -0.8675397058988992,
-      "coverage": 0.7974647755498769,
+      "provisional": false,
+      "coverage": 0.7974579922126238,
       "evidenceCount": 11,
       "saysVsDoesGap": false
     },
     {
       "issue": "abolish_ice",
       "score": -1,
-      "coverage": 0.8229879038321305,
+      "provisional": false,
+      "coverage": 0.8229814752317265,
       "evidenceCount": 10,
       "saysVsDoesGap": false
     },
     {
       "issue": "social_services",
       "score": -1,
-      "coverage": 0.38669278890142966,
+      "provisional": false,
+      "coverage": 0.38668650014739236,
       "evidenceCount": 4,
       "saysVsDoesGap": false
     }

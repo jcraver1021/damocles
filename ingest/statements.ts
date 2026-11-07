@@ -4,6 +4,7 @@ import {readFile, readdir} from 'node:fs/promises';
 import {join} from 'node:path';
 import {parse} from 'yaml';
 import type {Evidence, Rubric} from '../src/types.ts';
+import type {Identity} from './identity.ts';
 import {ROOT} from './lib.ts';
 
 interface StatementEntry {
@@ -23,7 +24,7 @@ const DIR = join(ROOT, 'data', 'statements');
 
 export async function ingestStatements(
   rubric: Rubric,
-  memberIds: Set<string>
+  identity: Identity
 ): Promise<Evidence[]> {
   const files = (await readdir(DIR).catch(() => [])).filter(f =>
     /\.ya?ml$/.test(f)
@@ -41,7 +42,7 @@ export async function ingestStatements(
       )?.statements ?? [];
     entries.forEach((s, n) => {
       const where = `${f}#${n + 1} (${s.memberId})`;
-      if (!memberIds.has(s.memberId)) errors.push(`${where}: unknown member`);
+      if (!identity.has(s.memberId)) errors.push(`${where}: unknown member`);
       if (!issues.has(s.issue))
         errors.push(`${where}: unknown issue ${s.issue}`);
       if (!(s.stance >= -2 && s.stance <= 2))

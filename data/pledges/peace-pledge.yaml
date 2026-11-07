@@ -1,0 +1,17 @@
+key: peace-pledge
+name: Track AIPAC PEACE Pledge
+issue: pro_palestine
+stance: 2
+url: 'https://pledge.trackaipac.com/'
+retrieved: '2026-11-06'
+description: 'Signers refuse money and support from AIPAC, DMFI, RJC, CUFI and allied PACs, recognize the Gaza genocide, and pledge to vote against military aid to any country committing gross human-rights violations or restricting humanitarian aid.'
+signers:
+  - member: K000389
+    name: Ro Khanna
+    date: '2026-06-17'
+  - member: T000481
+    name: Rashida Tlaib
+    date: '2026-06-26'
+  - member: R000617
+    name: Delia C. Ramirez
+    date: '2026-07-06'

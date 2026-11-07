@@ -606,6 +606,23 @@ footer {
   font-size: 0.9rem;
   padding: 0;
 }
+.issue-bar-track.provisional {
+  outline: 1px dashed var(--muted);
+  outline-offset: 1px;
+}
+.provisional-flag {
+  display: block;
+  font-size: 0.62rem;
+  color: var(--muted);
+}
+.index-badge .index-provisional {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.8;
+  border-top: 1px dashed currentColor;
+  margin-top: 1px;
+}
 .vote-meta {
   font-size: 0.8rem;
 }

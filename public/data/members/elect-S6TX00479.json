@@ -196,33 +196,50 @@
       "confidence": 1,
       "weight": 1,
       "reviewed": true
+    },
+    {
+      "id": "pledge:no-corporate-pac:S6TX00479",
+      "memberId": "S6TX00479",
+      "issue": "money_in_politics",
+      "kind": "pledge",
+      "stance": 2,
+      "summary": "Signed the No Corporate PAC Money pledge (End Citizens United Unrig Washington list): Signers refuse all corporate PAC contributions (End Citizens United's No Corporate PAC pledge, folded into its 2026 Unrig Washington commitment, which also includes backing a congressional stock-trading ban and dark-money disclosure).",
+      "sourceUrl": "https://www.endcitizensunited.org/unrig-washington",
+      "sourceDate": "2026-11-06",
+      "method": "human",
+      "confidence": 1,
+      "reviewed": true
     }
   ],
   "scores": [
     {
       "issue": "money_in_politics",
-      "score": null,
-      "coverage": 0,
-      "evidenceCount": 0,
+      "score": 1,
+      "provisional": true,
+      "coverage": 0.18121255698116112,
+      "evidenceCount": 1,
       "saysVsDoesGap": false
     },
     {
       "issue": "climate",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
     },
     {
       "issue": "immigration",
-      "score": null,
-      "coverage": 0.22505845879236208,
+      "score": 0.5,
+      "provisional": true,
+      "coverage": 0.22505431470394632,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
     {
       "issue": "lgbtqia",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -230,6 +247,7 @@
     {
       "issue": "science",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -237,6 +255,7 @@
     {
       "issue": "economic_wellbeing",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -244,6 +263,7 @@
     {
       "issue": "voting_rights",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -251,6 +271,7 @@
     {
       "issue": "accountability",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -258,6 +279,7 @@
     {
       "issue": "progressive_taxation",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -265,6 +287,7 @@
     {
       "issue": "universal_healthcare",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -272,6 +295,7 @@
     {
       "issue": "universal_childcare",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -279,20 +303,23 @@
     {
       "issue": "education",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
     },
     {
       "issue": "amnesty",
-      "score": null,
-      "coverage": 0.2232440667067921,
+      "score": 0.5,
+      "provisional": true,
+      "coverage": 0.22323995101482752,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
     {
       "issue": "transgender",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -300,6 +327,7 @@
     {
       "issue": "pro_palestine",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -307,6 +335,7 @@
     {
       "issue": "not_islamophobic",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -314,6 +343,7 @@
     {
       "issue": "not_antisemitic",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -321,6 +351,7 @@
     {
       "issue": "oppose_iran_war",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -328,6 +359,7 @@
     {
       "issue": "demilitarize",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -335,6 +367,7 @@
     {
       "issue": "food_drug_oversight",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -342,6 +375,7 @@
     {
       "issue": "targeted_bills",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -349,20 +383,23 @@
     {
       "issue": "pro_labor",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
     },
     {
       "issue": "abolish_ice",
-      "score": -0.014401146847992223,
-      "coverage": 0.5939947522503388,
+      "score": -0.014401146847992189,
+      "provisional": true,
+      "coverage": 0.5939870764817804,
       "evidenceCount": 7,
       "saysVsDoesGap": false
     },
     {
       "issue": "social_services",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
