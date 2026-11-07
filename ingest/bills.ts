@@ -4,7 +4,7 @@
 // aligned" evidence: that separates members within a party. It's -2, not 0,
 // so it never raises an opposed member's score.
 
-import type {Chamber, Evidence, Member, Rubric, Term} from '../src/types.ts';
+import type {Chamber, Evidence, Rubric, Term} from '../src/types.ts';
 import {fetchTextSnapshot} from './lib.ts';
 
 const SOURCE = 'govinfo-billstatus';
@@ -92,14 +92,20 @@ export async function loadBill(b: BillRef): Promise<Bill> {
 const servedIn = (terms: Term[], chamber: Chamber, from: string, to: string) =>
   terms.some(t => t.chamber === chamber && t.start < to && t.end > from);
 
+/** People to score, by bioguide, with their full term history. */
+export interface Person {
+  bioguide: string;
+  terms: Term[];
+}
+
 export async function ingestBillAnchors(
   rubric: Rubric,
-  records: {member: Member; terms: Term[]}[],
+  people: Person[],
   now: Date
 ): Promise<Evidence[]> {
   const evidence: Evidence[] = [];
   const today = now.toISOString().slice(0, 10);
-  const byBioguide = new Map(records.map(r => [r.member.id, r]));
+  const known = new Set(people.map(p => p.bioguide));
 
   for (const issue of rubric.issues) {
     for (const anchor of issue.anchors) {
@@ -122,7 +128,7 @@ export async function ingestBillAnchors(
       }
 
       for (const [bioguide, s] of signers) {
-        if (!byBioguide.has(bioguide)) continue; // no longer serving
+        if (!known.has(bioguide)) continue;
         evidence.push({
           id: `${anchor.ref}:${bioguide}:${issue.key}`,
           memberId: bioguide,
@@ -148,12 +154,12 @@ export async function ingestBillAnchors(
       }
       const closes =
         congressEnd(b.congress) < today ? congressEnd(b.congress) : today;
-      for (const {member, terms} of records) {
-        if (signers.has(member.id) || member.chamber !== chamber) continue;
+      for (const {bioguide, terms} of people) {
+        if (signers.has(bioguide)) continue;
         if (!servedIn(terms, chamber, bill.introduced, closes)) continue;
         evidence.push({
-          id: `${anchor.ref}:${member.id}:${issue.key}:absent`,
-          memberId: member.id,
+          id: `${anchor.ref}:${bioguide}:${issue.key}:absent`,
+          memberId: bioguide,
           issue: issue.key,
           kind: 'sponsorship',
           stance: -2,

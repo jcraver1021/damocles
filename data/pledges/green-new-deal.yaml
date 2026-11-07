@@ -1,0 +1,56 @@
+key: green-new-deal
+name: Green New Deal Pledge (Green New Deal Champions)
+issue: climate
+stance: 2
+url: 'https://gndchampions.com/congressional-champions/'
+retrieved: '2026-11-06'
+description: 'Signers commit to use their office to advance a Green New Deal, including co-sponsoring specified climate and environmental-justice bills, and to reject oil, gas, and coal contributions over $200.'
+signers:
+  - member: H6CO01273
+    name: Melat Kiros
+  - member: O000172
+    name: Alexandria Ocasio-Cortez
+  - member: P000617
+    name: Ayanna Pressley
+  - member: B001318
+    name: Becca Balint
+  - member: R000617
+    name: Delia C. Ramirez
+  - member: C001131
+    name: Greg Casar
+  - member: O000173
+    name: Ilhan Omar
+  - member: R000606
+    name: Jamie Raskin
+  - member: S001145
+    name: Janice D. Schakowsky
+  - member: N000002
+    name: Jerrold Nadler
+  - member: G000586
+    name: 'Jesús G. "Chuy" García'
+  - member: M000312
+    name: James P. McGovern
+  - member: S001231
+    name: Lateefah Simon
+  - member: D000635
+    name: Maxine Dexter
+  - member: F000476
+    name: Maxwell Frost
+  - member: B001300
+    name: Nanette Diaz Barragán
+  - member: J000298
+    name: Pramila Jayapal
+  - member: T000481
+    name: Rashida Tlaib
+  - member: K000389
+    name: Ro Khanna
+  - member: T000488
+    name: Shri Thanedar
+  - member: L000602
+    name: Summer L. Lee
+  - member: S000033
+    name: Bernard Sanders
+  - member: M000133
+    name: Edward J. Markey
+  - member: W000817
+    name: Elizabeth Warren

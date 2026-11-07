@@ -10,7 +10,7 @@ import type {
 } from '../types.ts';
 import {MemberCampaigns} from './MemberCampaigns.tsx';
 import {FinancePanel} from './FinancePanel.tsx';
-import {citizenIndex} from '../lib/citizenIndex.ts';
+import {citizenIndex, minScoredIssues} from '../lib/citizenIndex.ts';
 import {usePriorities} from '../lib/priorities.ts';
 import {CategoryBars} from './CategoryBars.tsx';
 import {IndexBadge} from './IndexBadge.tsx';
@@ -27,6 +27,7 @@ const KIND_BADGES: Record<Evidence['kind'], string> = {
   website: '🌐 Website',
   rating: '⭐ Rating',
   finance: '💵 Finance',
+  pledge: '✋ Pledge',
 };
 
 function externalLinks(m: Member): {label: string; href: string}[] {
@@ -165,7 +166,7 @@ export function MemberPage({id, rubric, members, campaigns}: PageProps) {
       </p>
     );
   const {member: m, terms, evidence, scores} = detail.data;
-  const index = citizenIndex(scores, rubric, priorities);
+  const index = citizenIndex(scores, rubric, priorities, minScoredIssues(m));
 
   return (
     <article>
@@ -276,6 +277,13 @@ export function MemberPage({id, rubric, members, campaigns}: PageProps) {
               weighted by your priorities. {index.scoredIssues} of{' '}
               {rubric.issues.length} issues have enough evidence to score.
             </p>
+            {index.provisional && (
+              <p className="notice">
+                Provisional: most of these scores rest on statements and
+                pledges, without votes or bills to back them. Issues marked
+                “words only” have no votes or bills.
+              </p>
+            )}
           </div>
         </div>
         <CategoryBars index={index} rubric={rubric} />

@@ -7,6 +7,7 @@ import type {
   Member,
   ResolvedCampaign,
 } from '../src/types.ts';
+import type {Identity} from './identity.ts';
 import {ROOT} from './lib.ts';
 
 const STANCES: CampaignStance[] = [
@@ -35,13 +36,13 @@ function needed(c: Campaign, audience: Member[]): number {
 }
 
 export async function ingestCampaigns(
-  members: Member[]
+  members: Member[],
+  identity: Identity
 ): Promise<ResolvedCampaign[]> {
   const file = parse(
     await readFile(join(ROOT, 'config', 'campaigns.yaml'), 'utf8')
   ) as {campaigns: Campaign[]};
   const errors: string[] = [];
-  const byId = new Map(members.map(m => [m.id, m]));
 
   const resolved = file.campaigns.map(c => {
     c.positions ??= [];
@@ -57,11 +58,13 @@ export async function ingestCampaigns(
     }
     const seen = new Set<string>();
     for (const p of c.positions) {
-      if (!byId.has(p.memberId))
-        errors.push(`${c.id}: unknown member ${p.memberId}`);
-      else if (!audienceIds.has(p.memberId)) {
+      // Any alias works; publish the audience record's id.
+      const ids = identity.resolve(p.memberId);
+      const inAud = ids.find(id => audienceIds.has(id));
+      if (!ids.length) errors.push(`${c.id}: unknown member ${p.memberId}`);
+      else if (!inAud) {
         errors.push(`${c.id}: ${p.memberId} isn't in the audience`);
-      }
+      } else p.memberId = inAud;
       if (seen.has(p.memberId)) errors.push(`${c.id}: duplicate ${p.memberId}`);
       seen.add(p.memberId);
       if (!STANCES.includes(p.stance))

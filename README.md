@@ -24,6 +24,7 @@ config/, data/  ──►  ingest/ (npm run ingest)  ──►  public/data/*.js
 | `config/campaigns.yaml`     | Citizen campaigns                                                     |
 | `config/members-elect.yaml` | Members-elect, departures, uncalled races                             |
 | `data/statements/`          | Sourced statements (verbatim quotes)                                  |
+| `data/pledges/`             | Pledges and their signers (one file per pledge)                       |
 | `data/scorecards/`          | Scorecard CSVs                                                        |
 | `data/raw/`                 | Dated snapshots of every download (gitignored; `REFRESH=1` refetches) |
 | `ingest/`                   | Pipeline; `index.ts` runs the steps in order                          |

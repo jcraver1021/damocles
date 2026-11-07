@@ -2927,124 +2927,154 @@
       "confidence": 1,
       "weight": 0.25,
       "reviewed": true
+    },
+    {
+      "id": "pledge:atr-taxpayer-protection:B001305",
+      "memberId": "B001305",
+      "issue": "progressive_taxation",
+      "kind": "pledge",
+      "stance": -2,
+      "summary": "Signed the Taxpayer Protection Pledge (Americans for Tax Reform): Signers pledge to oppose any and all efforts to increase marginal income tax rates for individuals and businesses, and to oppose any net reduction or elimination of deductions and credits unless matched dollar for dollar by further rate reductions.",
+      "sourceUrl": "https://atr.org/pledge-database/?office-filter=4696",
+      "sourceDate": "2026-11-06",
+      "method": "human",
+      "confidence": 1,
+      "reviewed": true
     }
   ],
   "scores": [
     {
       "issue": "money_in_politics",
       "score": null,
-      "coverage": 0.15879587961890818,
+      "provisional": false,
+      "coverage": 0.15879282875011547,
       "evidenceCount": 1,
       "saysVsDoesGap": false
     },
     {
       "issue": "climate",
       "score": -1,
-      "coverage": 0.4191617877024941,
+      "provisional": false,
+      "coverage": 0.41915516923314733,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "immigration",
       "score": -1,
-      "coverage": 0.3830225744522662,
+      "provisional": false,
+      "coverage": 0.3830163252728447,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "lgbtqia",
       "score": -1,
-      "coverage": 0.6404499429287531,
+      "provisional": false,
+      "coverage": 0.6404422290685274,
       "evidenceCount": 6,
       "saysVsDoesGap": false
     },
     {
       "issue": "science",
       "score": -1,
-      "coverage": 0.32682511181200125,
+      "provisional": false,
+      "coverage": 0.32681952422194693,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
     {
       "issue": "economic_wellbeing",
       "score": -1,
-      "coverage": 0.51078244240943,
+      "provisional": false,
+      "coverage": 0.5107751065076216,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "voting_rights",
       "score": -1,
-      "coverage": 0.4366192412336639,
+      "provisional": false,
+      "coverage": 0.4366124610943364,
       "evidenceCount": 5,
       "saysVsDoesGap": false
     },
     {
       "issue": "accountability",
       "score": -1,
-      "coverage": 0.8166951478348956,
+      "provisional": false,
+      "coverage": 0.8166886250040903,
       "evidenceCount": 10,
       "saysVsDoesGap": false
     },
     {
       "issue": "progressive_taxation",
       "score": -1,
-      "coverage": 0.672171148794464,
-      "evidenceCount": 8,
+      "provisional": false,
+      "coverage": 0.7315715744014383,
+      "evidenceCount": 9,
       "saysVsDoesGap": false
     },
     {
       "issue": "universal_healthcare",
       "score": -1,
-      "coverage": 0.3018188903213901,
+      "provisional": false,
+      "coverage": 0.30181362926927335,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "universal_childcare",
       "score": -1,
-      "coverage": 0.4707388677492075,
+      "provisional": false,
+      "coverage": 0.4707318047298854,
       "evidenceCount": 5,
       "saysVsDoesGap": false
     },
     {
       "issue": "education",
       "score": -1,
-      "coverage": 0.3005453543048988,
+      "provisional": false,
+      "coverage": 0.30054011039144946,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "amnesty",
       "score": null,
-      "coverage": 0.21369407761254422,
+      "provisional": false,
+      "coverage": 0.2136901128446852,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
     {
       "issue": "transgender",
       "score": -1,
-      "coverage": 0.42705744180790917,
+      "provisional": false,
+      "coverage": 0.42705074883526073,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "pro_palestine",
       "score": -1,
-      "coverage": 0.9685704081313176,
+      "provisional": false,
+      "coverage": 0.9685681272375963,
       "evidenceCount": 13,
       "saysVsDoesGap": false
     },
     {
       "issue": "not_islamophobic",
       "score": -1,
-      "coverage": 0.17245553424698212,
+      "provisional": false,
+      "coverage": 0.17245224876388277,
       "evidenceCount": 1,
       "saysVsDoesGap": false
     },
     {
       "issue": "not_antisemitic",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -3052,27 +3082,31 @@
     {
       "issue": "oppose_iran_war",
       "score": -1,
-      "coverage": 0.9916043432703601,
+      "provisional": false,
+      "coverage": 0.9916035015228982,
       "evidenceCount": 16,
       "saysVsDoesGap": false
     },
     {
       "issue": "demilitarize",
-      "score": -0.9344413669163549,
-      "coverage": 0.94000253029316,
+      "score": -0.9344413669163552,
+      "provisional": false,
+      "coverage": 0.9399989898374349,
       "evidenceCount": 14,
       "saysVsDoesGap": false
     },
     {
       "issue": "food_drug_oversight",
       "score": -1,
-      "coverage": 0.6086517773936968,
+      "provisional": false,
+      "coverage": 0.6086440769247399,
       "evidenceCount": 5,
       "saysVsDoesGap": false
     },
     {
       "issue": "targeted_bills",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -3080,21 +3114,24 @@
     {
       "issue": "pro_labor",
       "score": -1,
-      "coverage": 0.8485528016346929,
+      "provisional": false,
+      "coverage": 0.8485468060054512,
       "evidenceCount": 12,
       "saysVsDoesGap": false
     },
     {
       "issue": "abolish_ice",
       "score": -1,
-      "coverage": 0.7722494936794496,
+      "provisional": false,
+      "coverage": 0.7722424263366485,
       "evidenceCount": 8,
       "saysVsDoesGap": false
     },
     {
       "issue": "social_services",
       "score": -1,
-      "coverage": 0.31430566597775766,
+      "provisional": false,
+      "coverage": 0.3143002394790112,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     }

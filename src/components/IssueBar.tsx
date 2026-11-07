@@ -13,12 +13,15 @@ export function IssueBar({label, score, compact}: Props) {
   const title =
     value === null
       ? `${label}: not enough evidence yet`
-      : `${label}: ${Math.round(value * 100)} (coverage ${Math.round((score?.coverage ?? 0) * 100)}%, ${score?.evidenceCount} items)`;
+      : `${label}: ${Math.round(value * 100)} (coverage ${Math.round((score?.coverage ?? 0) * 100)}%, ${score?.evidenceCount} items${score?.provisional ? '; provisional: words only' : ''})`;
+  const provisional = value !== null && score?.provisional;
 
   return (
     <div className={`issue-bar${compact ? ' compact' : ''}`} title={title}>
       <span className="issue-bar-label">{label}</span>
-      <span className={`issue-bar-track${value === null ? ' empty' : ''}`}>
+      <span
+        className={`issue-bar-track${value === null ? ' empty' : ''}${provisional ? ' provisional' : ''}`}
+      >
         {value !== null && (
           <span
             className={`issue-bar-fill ${value >= 0 ? 'aligned' : 'opposed'}`}
@@ -34,6 +37,14 @@ export function IssueBar({label, score, compact}: Props) {
       {!compact && (
         <span className="issue-bar-value">
           {value === null ? 'No data' : Math.round(value * 100)}
+          {provisional && (
+            <span
+              className="provisional-flag"
+              title="Based only on statements or pledges, no votes or bills"
+            >
+              words only
+            </span>
+          )}
           {score?.saysVsDoesGap && (
             <span className="gap-flag" title="Statements and votes disagree">
               ⚠

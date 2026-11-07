@@ -140,3 +140,19 @@ export async function ingestLegislators(): Promise<LegislatorRecord[]> {
     return {member, terms: raw.terms.map(toTerm)};
   });
 }
+
+/** Term histories of former members, by bioguide. */
+export async function loadHistoricalTerms(
+  bioguides: Set<string>
+): Promise<Map<string, Term[]>> {
+  if (!bioguides.size) return new Map();
+  const historical = await fetchJsonSnapshot<RawLegislator[]>(
+    SOURCE,
+    `${BASE}/legislators-historical.json`
+  );
+  return new Map(
+    historical
+      .filter(h => bioguides.has(h.id.bioguide))
+      .map(h => [h.id.bioguide, h.terms.map(toTerm)])
+  );
+}

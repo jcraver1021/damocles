@@ -1,6 +1,11 @@
 import {useMemo} from 'react';
 import {usePriorities} from '../lib/priorities.ts';
-import {BANDS, bandFor, citizenIndex} from '../lib/citizenIndex.ts';
+import {
+  BANDS,
+  bandFor,
+  citizenIndex,
+  minScoredIssues,
+} from '../lib/citizenIndex.ts';
 import {formatYears, partyCode, seatLabel} from '../lib/format.ts';
 import {useSessionState} from '../lib/sessionState.ts';
 import type {Chamber, IndexedMember, Rubric} from '../types.ts';
@@ -53,7 +58,10 @@ export function MemberList({members, rubric}: Props) {
       .filter(m => !party || partyCode(m.party) === party)
       .filter(m => !state || m.state === state)
       .filter(m => !q || m.name.full.toLowerCase().includes(q))
-      .map(m => ({m, index: citizenIndex(m.scores, rubric, priorities)}))
+      .map(m => ({
+        m,
+        index: citizenIndex(m.scores, rubric, priorities, minScoredIssues(m)),
+      }))
       .filter(
         ({index}) =>
           !band ||

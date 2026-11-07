@@ -8,6 +8,7 @@ export const KIND_WEIGHTS: Record<EvidenceKind, number> = {
   sponsorship: 0.8,
   rating: 0.7,
   finance: 0.6,
+  pledge: 0.6,
   debate: 0.5,
   interview: 0.5,
   statement: 0.4,
@@ -19,6 +20,7 @@ const ACTION_KINDS: ReadonlySet<EvidenceKind> = new Set([
   'sponsorship',
 ]);
 const WORD_KINDS: ReadonlySet<EvidenceKind> = new Set([
+  'pledge',
   'statement',
   'debate',
   'interview',
@@ -27,6 +29,8 @@ const WORD_KINDS: ReadonlySet<EvidenceKind> = new Set([
 
 export const RECENCY_HALF_LIFE_YEARS = 6;
 export const MIN_WEIGHT_FOR_SCORE = 1;
+/** Words-only issues (e.g. members-elect) score at this lower threshold, flagged provisional. */
+export const PROVISIONAL_MIN_WEIGHT = 0.4;
 
 const MS_PER_YEAR = 365.25 * 24 * 3600 * 1000;
 
@@ -82,10 +86,16 @@ export function scoreIssue(
     saysVsDoesGap = Math.sign(a) !== Math.sign(w) && Math.abs(a - w) >= 0.75;
   }
 
+  const provisional =
+    items.length > 0 && items.every(e => WORD_KINDS.has(e.kind));
+  const min = opts.minEvidenceWeight ?? MIN_WEIGHT_FOR_SCORE;
   return {
     issue,
     score:
-      weight >= (opts.minEvidenceWeight ?? MIN_WEIGHT_FOR_SCORE) ? mean : null,
+      weight >= (provisional ? Math.min(min, PROVISIONAL_MIN_WEIGHT) : min)
+        ? mean
+        : null,
+    provisional,
     coverage: 1 - Math.exp(-weight / 3),
     evidenceCount: items.length,
     saysVsDoesGap,

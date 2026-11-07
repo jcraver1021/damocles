@@ -8,12 +8,14 @@ import type {
   MemberDetail,
   MembersIndex,
 } from '../src/types.ts';
-import {ingestBillAnchors} from './bills.ts';
+import {ingestBillAnchors, type Person} from './bills.ts';
 import {addSmallDonorSplit, loadFecBulk} from './fec.ts';
 import {ingestCampaigns} from './campaigns.ts';
-import {ingestLegislators} from './legislators.ts';
+import {Identity} from './identity.ts';
+import {ingestLegislators, loadHistoricalTerms} from './legislators.ts';
 import {PUBLIC_DATA_DIR, resetDir, writeJson} from './lib.ts';
 import {ingestMembersElect} from './membersElect.ts';
+import {ingestPledges} from './pledges.ts';
 import {loadRubric} from './rubric.ts';
 import {applyTenure} from './tenure.ts';
 import {ingestScorecards} from './scorecards.ts';
@@ -43,22 +45,44 @@ if (process.env.FEC_API_KEY) {
 for (const {member} of records) {
   member.departure = elect.departures.get(member.id);
 }
+// Members-elect who served before keep their record: terms from the current
+// roster (e.g. a House member elected to the Senate) or the historical one.
+const termsByBioguide = new Map(records.map(r => [r.member.id, r.terms]));
+const formerIds = new Set(
+  elect.members
+    .map(m => m.ids.bioguide)
+    .filter((b): b is string => !!b && !termsByBioguide.has(b))
+);
+for (const [b, terms] of await loadHistoricalTerms(formerIds)) {
+  termsByBioguide.set(b, terms);
+}
 const allRecords = [
   ...records,
-  ...elect.members.map(member => ({member, terms: []})),
+  ...elect.members.map(member => ({
+    member,
+    terms: termsByBioguide.get(member.ids.bioguide ?? '') ?? [],
+  })),
 ];
+const identity = new Identity(allRecords.map(r => r.member));
+const people: Person[] = [...termsByBioguide].map(([bioguide, terms]) => ({
+  bioguide,
+  terms,
+}));
 
-// Evidence sources.
+// Evidence sources. memberId may be any alias; identity routes it.
 const evidence: Evidence[] = [
   ...(await ingestAnchorVotes(rubric)),
   ...(await ingestScorecards(rubric, records, now)),
-  ...(await ingestBillAnchors(rubric, records, now)),
-  ...(await ingestStatements(
-    rubric,
-    new Set([...records.map(r => r.member.id), ...elect.members.map(m => m.id)])
-  )),
+  ...(await ingestBillAnchors(rubric, people, now)),
+  ...(await ingestStatements(rubric, identity)),
+  ...(await ingestPledges(rubric, identity)),
 ];
-const evidenceByMember = Map.groupBy(evidence, e => e.memberId);
+const evidenceByMember = new Map<string, Evidence[]>();
+for (const e of evidence) {
+  for (const id of identity.resolve(e.memberId)) {
+    evidenceByMember.set(id, [...(evidenceByMember.get(id) ?? []), e]);
+  }
+}
 
 await writeJson(join(PUBLIC_DATA_DIR, 'rubric.json'), rubric);
 
@@ -80,7 +104,10 @@ const index: MembersIndex = {
 };
 await writeJson(join(PUBLIC_DATA_DIR, 'members.json'), index);
 
-const campaigns = await ingestCampaigns(allRecords.map(r => r.member));
+const campaigns = await ingestCampaigns(
+  allRecords.map(r => r.member),
+  identity
+);
 await writeJson(join(PUBLIC_DATA_DIR, 'campaigns.json'), campaigns);
 for (const c of campaigns) {
   console.log(

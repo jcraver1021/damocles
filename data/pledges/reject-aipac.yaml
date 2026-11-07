@@ -1,0 +1,30 @@
+key: reject-aipac
+name: 'Reject AIPAC pledge (Reject AIPAC coalition "Rejecters" list)'
+issue: pro_palestine
+stance: 2
+url: 'https://web.archive.org/web/20260515230709/https://www.rejectaipac.org/rejecters'
+retrieved: '2026-05-15'
+description: 'Members listed by the IfNotNow-led Reject AIPAC coalition as publicly rejecting AIPAC, i.e. refusing endorsements and contributions from AIPAC and its aligned PACs.'
+signers:
+  - member: L000602
+    name: Summer L. Lee
+  - member: S000033
+    name: Bernard Sanders
+  - member: P000607
+    name: Mark Pocan
+  - member: O000173
+    name: Ilhan Omar
+  - member: R000617
+    name: Delia C. Ramirez
+  - member: J000298
+    name: Pramila Jayapal
+  - member: O000172
+    name: Alexandria Ocasio-Cortez
+  - member: C001131
+    name: Greg Casar
+  - member: T000481
+    name: Rashida Tlaib
+  - member: P000617
+    name: Ayanna Pressley
+  - member: V000081
+    name: Nydia M. Velázquez

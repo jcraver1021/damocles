@@ -2610,118 +2610,135 @@
     {
       "issue": "money_in_politics",
       "score": 0.49536876265248797,
-      "coverage": 0.41047251274425023,
+      "provisional": false,
+      "coverage": 0.4104659788675522,
       "evidenceCount": 4,
       "saysVsDoesGap": false
     },
     {
       "issue": "climate",
       "score": 1,
-      "coverage": 0.6118643716903844,
+      "provisional": false,
+      "coverage": 0.6118566673311117,
       "evidenceCount": 4,
       "saysVsDoesGap": false
     },
     {
       "issue": "immigration",
       "score": 1,
-      "coverage": 0.6034273119917332,
+      "provisional": false,
+      "coverage": 0.6034196190285567,
       "evidenceCount": 5,
       "saysVsDoesGap": false
     },
     {
       "issue": "lgbtqia",
-      "score": 0.9768670505701424,
-      "coverage": 0.6926679702442271,
+      "score": 0.9768670505701426,
+      "provisional": false,
+      "coverage": 0.692660365140402,
       "evidenceCount": 6,
       "saysVsDoesGap": false
     },
     {
       "issue": "science",
       "score": 1,
-      "coverage": 0.32682511181200125,
+      "provisional": false,
+      "coverage": 0.32681952422194693,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
     {
       "issue": "economic_wellbeing",
       "score": 1,
-      "coverage": 0.5037630490111316,
+      "provisional": false,
+      "coverage": 0.5037557561278964,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "voting_rights",
       "score": 1,
-      "coverage": 0.6757049810512226,
+      "provisional": false,
+      "coverage": 0.6756973216157154,
       "evidenceCount": 5,
       "saysVsDoesGap": false
     },
     {
       "issue": "accountability",
-      "score": 0.8464865915753487,
-      "coverage": 0.9261420893743502,
+      "score": 0.8464865915753486,
+      "provisional": false,
+      "coverage": 0.9261380529907925,
       "evidenceCount": 14,
       "saysVsDoesGap": false
     },
     {
       "issue": "progressive_taxation",
-      "score": 0.5989678462803347,
-      "coverage": 0.6311692044338348,
+      "score": 0.5989678462803346,
+      "provisional": false,
+      "coverage": 0.6311614886086139,
       "evidenceCount": 7,
       "saysVsDoesGap": false
     },
     {
       "issue": "universal_healthcare",
       "score": null,
-      "coverage": 0.20035770472680958,
+      "provisional": false,
+      "coverage": 0.20035395478574403,
       "evidenceCount": 1,
       "saysVsDoesGap": false
     },
     {
       "issue": "universal_childcare",
-      "score": 0.7362367778720961,
-      "coverage": 0.39679570331886205,
+      "score": 0.736236777872096,
+      "provisional": false,
+      "coverage": 0.3967893080163487,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "education",
       "score": 1,
-      "coverage": 0.5149478884740131,
+      "provisional": false,
+      "coverage": 0.5149405280409103,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "amnesty",
       "score": null,
-      "coverage": 0.21369407761254422,
+      "provisional": false,
+      "coverage": 0.2136901128446852,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
     {
       "issue": "transgender",
       "score": 0.9050838324697433,
-      "coverage": 0.7545680985446963,
+      "provisional": false,
+      "coverage": 0.7545608674205303,
       "evidenceCount": 6,
       "saysVsDoesGap": false
     },
     {
       "issue": "pro_palestine",
-      "score": 0.938768764216262,
-      "coverage": 0.8279580318540589,
+      "score": 0.9387687642162621,
+      "provisional": false,
+      "coverage": 0.8279516809871635,
       "evidenceCount": 9,
       "saysVsDoesGap": false
     },
     {
       "issue": "not_islamophobic",
       "score": 1,
-      "coverage": 0.46489977812295924,
+      "provisional": false,
+      "coverage": 0.4648927603223322,
       "evidenceCount": 3,
       "saysVsDoesGap": false
     },
     {
       "issue": "not_antisemitic",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -2729,27 +2746,31 @@
     {
       "issue": "oppose_iran_war",
       "score": 1,
-      "coverage": 0.9085103762764155,
+      "provisional": false,
+      "coverage": 0.9085057871260638,
       "evidenceCount": 8,
       "saysVsDoesGap": false
     },
     {
       "issue": "demilitarize",
-      "score": 0.4508244754926621,
-      "coverage": 0.9310409263810872,
+      "score": 0.450824475492662,
+      "provisional": false,
+      "coverage": 0.9310370584556886,
       "evidenceCount": 14,
       "saysVsDoesGap": false
     },
     {
       "issue": "food_drug_oversight",
       "score": null,
-      "coverage": 0.12482563175428851,
+      "provisional": false,
+      "coverage": 0.12482318436079942,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
     {
       "issue": "targeted_bills",
       "score": null,
+      "provisional": false,
       "coverage": 0,
       "evidenceCount": 0,
       "saysVsDoesGap": false
@@ -2757,21 +2778,24 @@
     {
       "issue": "pro_labor",
       "score": 0.8654838594056244,
-      "coverage": 0.7924611028052266,
+      "provisional": false,
+      "coverage": 0.7924542581188392,
       "evidenceCount": 8,
       "saysVsDoesGap": false
     },
     {
       "issue": "abolish_ice",
       "score": 1,
-      "coverage": 0.7005093300384475,
+      "provisional": false,
+      "coverage": 0.7005017566237122,
       "evidenceCount": 6,
       "saysVsDoesGap": false
     },
     {
       "issue": "social_services",
-      "score": 0.3571478322965203,
-      "coverage": 0.4632492489862695,
+      "score": 0.3571478322965201,
+      "provisional": false,
+      "coverage": 0.46324224421046156,
       "evidenceCount": 6,
       "saysVsDoesGap": false
     }
