@@ -1,0 +1,95 @@
+# James Talarico on the border, ICE, and legal status; researched 2026-11-06.
+# Stances follow the abolish_ice / amnesty / immigration goals in config/rubric.yaml.
+# Context, not scored: in the Texas House (Nov. 14, 2023) he voted no on SB 4
+# (state crime of illegal entry) and SB 3 (border barrier and security funding).
+# https://journals.house.texas.gov/hjrnl/884/pdf/88C4DAY05FINAL.PDF
+
+statements:
+  - memberId: elect-S6TX00479
+    issue: abolish_ice
+    stance: 1
+    date: '2026-01-24'
+    sourceUrl: https://web.archive.org/web/20260124200256/https://jamestalarico.com/issue/immigration-border-security/
+    quote: 'Ban ICE agents from wearing masks or refusing to show identification, and hold them accountable when they break the law.'
+    summary: "Listed under 'Hold ICE accountable for abuses' in the Senate priorities on his campaign issue page; the text is present in the earliest Wayback capture (2026-01-24), so the date is the earliest confirmed, not the publication date."
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: amnesty
+    stance: 1
+    date: '2026-01-24'
+    sourceUrl: https://web.archive.org/web/20260124200256/https://jamestalarico.com/issue/immigration-border-security/
+    quote: 'Create a path to citizenship for the immigrants who have been here the longest and certain groups like spouses and DREAMers, while allowing those who recently arrived to apply for temporary work permits if they are filling a job that will help lower costs for Americans.'
+    summary: "Campaign issue page priority 'Create pathways to legalization for certain undocumented immigrants'; present in the earliest Wayback capture (2026-01-24) and still on the live page after the election."
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: immigration
+    stance: 1
+    date: '2026-01-24'
+    sourceUrl: https://web.archive.org/web/20260124200256/https://jamestalarico.com/issue/immigration-border-security/
+    quote: 'We should be stopping illegal immigration, not curtailing avenues for immigrants to legally migrate to America and make our country richer and stronger.'
+    summary: 'Campaign issue page text, present in the earliest Wayback capture (2026-01-24), pairing opposition to illegal immigration with protecting legal migration avenues.'
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: abolish_ice
+    stance: 2
+    date: '2026-02-10'
+    sourceUrl: https://dallasweekly.com/2026/02/talarico-immigration-accountability-ice/
+    quote: 'It is time to tear down this secret police force and replace it with an agency that actually focuses on public safety for all of us.'
+    summary: 'At a Democratic primary rally in Denton (UNT, Feb. 10, 2026), referencing the ICE killing of Renee Good in Minnesota, Talarico called for replacing ICE; Dallas Weekly reported it.'
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: abolish_ice
+    stance: -1
+    date: '2026-07-13'
+    sourceUrl: https://www.tpr.org/border-immigration/2026-07-13/talarico-unveils-border-security-plan-criticizes-biden-policies-and-trumps-big-bend-wall
+    quote: 'What most Texans, and I think what most Americans want, is a common-sense approach to border security, one that ensures we have enough Border Patrol agents, we have enough technology, we have enough judges to be able to have an orderly, safe process on our southern border'
+    summary: "At a Terrell County campaign stop unveiling his border security plan (more Border Patrol agents, surveillance technology, immigration judges), where he also criticized Biden's border record and Trump's Big Bend wall."
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: abolish_ice
+    stance: -1
+    date: '2026-09-09'
+    sourceUrl: https://www.newsbusters.org/blogs/nb/jorge-bonilla/2026/09/09/most-interesting-moments-james-talaricos-fox-news-interview
+    quote: "It’s why I'm a border security Democrat. And let me say something a lot of Democrats won't say. It is not racist to want to know who’s coming into your country."
+    summary: 'In a Fox News interview with Brooke Taylor (transcribed by NewsBusters), answering a question about crimes by migrants without criminal records, citing the Jocelyn Nungaray case.'
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: amnesty
+    stance: 1
+    date: '2026-09-09'
+    sourceUrl: https://www.newsbusters.org/blogs/nb/jorge-bonilla/2026/09/09/most-interesting-moments-james-talaricos-fox-news-interview
+    quote: "I think we should include a pathway to citizenship for folks who have been here for years and decades, folks who don't pose a threat to public safety and people who are willing to pay back taxes, who are willing to learn English."
+    summary: "In the same Fox News interview, responding to Paxton ads clipping his 'welcome mat' line, he described a comprehensive reform package 'which includes border security' plus a conditional path for long-term residents."
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: abolish_ice
+    stance: 1
+    date: '2026-10-14'
+    sourceUrl: https://www.houstonpublicmedia.org/articles/news/politics/2026/10/15/564437/talarico-says-he-doesnt-support-abolishing-ice-but-criticizes-their-work-under-trump-as-secret-police/
+    quote: "We need Immigration and Customs Enforcement in this country, but that's not what we're seeing. What we've seen over the last year is a secret police force, and that's what we don't want in this country. We don't want masked men in unmarked vehicles coming through and terrorizing our communities."
+    summary: "At the CNN/Jubilee town hall in Fort Worth, answering whether he supports abolishing ICE ('No, and I never have'), he criticized ICE's conduct under Trump while rejecting abolition."
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: abolish_ice
+    stance: -1
+    date: '2026-10-14'
+    sourceUrl: https://www.houstonpublicmedia.org/articles/news/politics/2026/10/15/564437/talarico-says-he-doesnt-support-abolishing-ice-but-criticizes-their-work-under-trump-as-secret-police/
+    quote: 'I’m going to call out Democrats like Joe Biden who failed us on our southern border because we need border security here in Texas.'
+    summary: 'At the same CNN/Jubilee town hall in Fort Worth, while describing himself as willing to stand up to his own party on oil and gas and the border.'
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: immigration
+    stance: 1
+    date: '2026-11-04'
+    sourceUrl: https://www.foxnews.com/media/texas-senate-victor-james-talarico-lays-out-common-ground-trump-vows-work-together
+    quote: 'Talarico, who defeated Paxton by over ten points, said Congress must create more legal pathways for immigrants who want to come to the United States.'
+    summary: "Reporter's summary of his post-election interview on Fox News' 'America's Newsroom' the day after he won, discussing areas of agreement with Trump."
+    quoteVerified: true
+  - memberId: elect-S6TX00479
+    issue: abolish_ice
+    stance: -1
+    date: '2026-11-04'
+    sourceUrl: https://www.foxnews.com/media/texas-senate-victor-james-talarico-lays-out-common-ground-trump-vows-work-together
+    quote: 'give the president credit where credit is due. He has done a better job than the previous administration in securing our border'
+    summary: "In the same post-election 'America's Newsroom' interview, naming immigration as an area to work with Trump via comprehensive reform 'that includes border security.'"
+    quoteVerified: true

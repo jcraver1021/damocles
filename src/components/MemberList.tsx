@@ -1,8 +1,9 @@
-import {useMemo, useState} from 'react';
+import {useMemo} from 'react';
 import {usePriorities} from '../lib/priorities.ts';
 import {BANDS, bandFor, citizenIndex} from '../lib/citizenIndex.ts';
 import {formatYears, partyCode, seatLabel} from '../lib/format.ts';
-import type {Chamber, IndexedMember, MemberStatus, Rubric} from '../types.ts';
+import {useSessionState} from '../lib/sessionState.ts';
+import type {Chamber, IndexedMember, Rubric} from '../types.ts';
 import {CategoryBars} from './CategoryBars.tsx';
 import {IndexBadge} from './IndexBadge.tsx';
 import {MemberBadges} from './MemberBadges.tsx';
@@ -15,15 +16,28 @@ interface Props {
 }
 
 type Sort = 'name' | 'state' | 'seniority' | 'index-desc' | 'index-asc';
+/** incoming = next Congress: returning members plus members-elect. */
+type StatusFilter = 'incoming' | 'serving' | 'elect' | '';
+
+const matchesStatus = (m: IndexedMember, f: StatusFilter) =>
+  f === 'incoming'
+    ? m.status === 'elect' || !m.departure
+    : !f || m.status === f;
 
 export function MemberList({members, rubric}: Props) {
-  const [query, setQuery] = useState('');
-  const [chamber, setChamber] = useState<Chamber | ''>('');
-  const [party, setParty] = useState('');
-  const [state, setState] = useState('');
-  const [status, setStatus] = useState<MemberStatus | ''>('serving');
-  const [band, setBand] = useState('');
-  const [sort, setSort] = useState<Sort>('state');
+  const [query, setQuery] = useSessionState('filter.query', '');
+  const [chamber, setChamber] = useSessionState<Chamber | ''>(
+    'filter.chamber',
+    ''
+  );
+  const [party, setParty] = useSessionState('filter.party', '');
+  const [state, setState] = useSessionState('filter.state', '');
+  const [status, setStatus] = useSessionState<StatusFilter>(
+    'filter.status',
+    'incoming'
+  );
+  const [band, setBand] = useSessionState('filter.band', '');
+  const [sort, setSort] = useSessionState<Sort>('filter.sort', 'state');
   const [priorities, setPriority] = usePriorities();
 
   const states = useMemo(
@@ -34,7 +48,7 @@ export function MemberList({members, rubric}: Props) {
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
     const filtered = members
-      .filter(m => !status || m.status === status)
+      .filter(m => matchesStatus(m, status))
       .filter(m => !chamber || m.chamber === chamber)
       .filter(m => !party || partyCode(m.party) === party)
       .filter(m => !state || m.state === state)
@@ -113,12 +127,13 @@ export function MemberList({members, rubric}: Props) {
         />
         <select
           value={status}
-          onChange={e => setStatus(e.target.value as MemberStatus | '')}
+          onChange={e => setStatus(e.target.value as StatusFilter)}
           aria-label="Status"
         >
+          <option value="incoming">Incoming Congress</option>
           <option value="serving">Serving now</option>
-          <option value="elect">Members-elect</option>
-          <option value="">Serving + elect</option>
+          <option value="elect">Members-elect only</option>
+          <option value="">Everyone</option>
         </select>
         <select
           value={chamber}
@@ -183,7 +198,9 @@ export function MemberList({members, rubric}: Props) {
         onChange={setPriority}
       />
 
-      <p className="muted">{rows.length} members</p>
+      <p className="muted">
+        {rows.length} member{rows.length === 1 ? '' : 's'}
+      </p>
       <ul className="member-grid">
         {rows.map(({m, index}) => (
           <li key={m.id}>
