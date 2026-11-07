@@ -1,9 +1,14 @@
 import {mkdir, readFile, rm, writeFile} from 'node:fs/promises';
 import {dirname, join} from 'node:path';
+import {format, resolveConfig} from 'prettier';
 
 export const ROOT = join(import.meta.dirname, '..');
 export const RAW_DIR = join(ROOT, 'data', 'raw');
 export const PUBLIC_DATA_DIR = join(ROOT, 'public', 'data');
+
+const prettierConfig = resolveConfig(
+  join(ROOT, 'public', 'data', 'x.json')
+).then(c => c ?? {});
 
 const today = new Date().toISOString().slice(0, 10);
 
@@ -83,9 +88,14 @@ export function parseCsv(text: string): Record<string, string>[] {
     .map(r => Object.fromEntries(header.map((h, i) => [h, r[i] ?? ''])));
 }
 
+/** Writes Prettier-formatted JSON, so `check-format` covers generated data. */
 export async function writeJson(path: string, data: unknown): Promise<void> {
   await mkdir(dirname(path), {recursive: true});
-  await writeFile(path, JSON.stringify(data) + '\n');
+  const options = await prettierConfig;
+  await writeFile(
+    path,
+    await format(JSON.stringify(data), {...options, parser: 'json'})
+  );
 }
 
 export async function resetDir(path: string): Promise<void> {

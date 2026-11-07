@@ -1,1 +1,206 @@
-{"member":{"id":"elect-S6OK04247","status":"elect","jurisdiction":"us-federal","ids":{"bioguide":"H001082","fec":["S6OK04247"]},"name":{"first":"Kevin","last":"Hern","full":"Kevin Hern"},"chamber":"senate","state":"OK","party":"Republican","caucus":"Republican","votingMember":true,"termStart":"2027-01-03","termEnd":"2033-01-03","replaces":"A000383","electionSource":{"status":"projected","url":"https://www.newson6.com/oklahoma-politics/oklahoma-u-s-senate-election-results"},"finance":{"cycle":2026,"candidateId":"S6OK04247","receipts":10862233.27,"individualTotal":1501487.81,"pacContributions":1027600,"partyContributions":62000,"candidateSelfFunding":0,"coverageEnd":"2026-10-14","sourceUrl":"https://www.fec.gov/data/candidate/S6OK04247/?cycle=2026"},"photoUrl":"https://unitedstates.github.io/images/congress/225x275/H001082.jpg","social":{}},"terms":[],"evidence":[],"scores":[{"issue":"money_in_politics","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"climate","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"immigration","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"lgbtqia","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"science","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"economic_wellbeing","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"voting_rights","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"accountability","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"progressive_taxation","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"universal_healthcare","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"universal_childcare","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"education","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"amnesty","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"transgender","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"pro_palestine","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"not_islamophobic","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"not_antisemitic","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"oppose_iran_war","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"demilitarize","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"food_drug_oversight","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"targeted_bills","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"pro_labor","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"abolish_ice","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false},{"issue":"social_services","score":null,"coverage":0,"evidenceCount":0,"saysVsDoesGap":false}]}
+{
+  "member": {
+    "id": "elect-S6OK04247",
+    "status": "elect",
+    "jurisdiction": "us-federal",
+    "ids": {"bioguide": "H001082", "fec": ["S6OK04247"]},
+    "name": {"first": "Kevin", "last": "Hern", "full": "Kevin Hern"},
+    "chamber": "senate",
+    "state": "OK",
+    "party": "Republican",
+    "caucus": "Republican",
+    "votingMember": true,
+    "termStart": "2027-01-03",
+    "termEnd": "2033-01-03",
+    "replaces": "A000383",
+    "electionSource": {
+      "status": "projected",
+      "url": "https://www.newson6.com/oklahoma-politics/oklahoma-u-s-senate-election-results"
+    },
+    "finance": {
+      "cycle": 2026,
+      "candidateId": "S6OK04247",
+      "receipts": 10862233.27,
+      "individualTotal": 1501487.81,
+      "pacContributions": 1027600,
+      "partyContributions": 62000,
+      "candidateSelfFunding": 0,
+      "coverageEnd": "2026-10-14",
+      "sourceUrl": "https://www.fec.gov/data/candidate/S6OK04247/?cycle=2026"
+    },
+    "photoUrl": "https://unitedstates.github.io/images/congress/225x275/H001082.jpg",
+    "social": {}
+  },
+  "terms": [],
+  "evidence": [],
+  "scores": [
+    {
+      "issue": "money_in_politics",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "climate",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "immigration",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "lgbtqia",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "science",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "economic_wellbeing",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "voting_rights",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "accountability",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "progressive_taxation",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "universal_healthcare",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "universal_childcare",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "education",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "amnesty",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "transgender",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "pro_palestine",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "not_islamophobic",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "not_antisemitic",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "oppose_iran_war",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "demilitarize",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "food_drug_oversight",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "targeted_bills",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "pro_labor",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "abolish_ice",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    },
+    {
+      "issue": "social_services",
+      "score": null,
+      "coverage": 0,
+      "evidenceCount": 0,
+      "saysVsDoesGap": false
+    }
+  ]
+}

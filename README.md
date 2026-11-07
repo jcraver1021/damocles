@@ -68,6 +68,10 @@ Before trusting a change: `ingest`, the relevant `verify:*`, `lint`, `check-form
 | `npm run check-format` / `format` | Prettier, `ruff format`                                         |
 | `*:ts`, `*:md`, `*:js`, `*:py`    | One language only, e.g. `lint:py`                               |
 
+CI (`.github/workflows/`): `js-ci.yaml` runs format, lint, Markdown, and build on Node 22 and 24;
+`python-ci.yaml` runs Ruff when Python files change. Generated JSON in `public/data/` is
+Prettier-formatted by ingest, so `check-format` covers it.
+
 `FEC_API_KEY` (free at [api.data.gov](https://api.data.gov/signup/)) adds the small-donor split.
 
 ## Sources
