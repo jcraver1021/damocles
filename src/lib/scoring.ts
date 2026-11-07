@@ -27,7 +27,9 @@ const WORD_KINDS: ReadonlySet<EvidenceKind> = new Set([
   'website',
 ]);
 
+/** Years for evidence to lose half its weight. Words fade faster: positions shift. */
 export const RECENCY_HALF_LIFE_YEARS = 6;
+export const WORDS_HALF_LIFE_YEARS = 2;
 export const MIN_WEIGHT_FOR_SCORE = 1;
 /** Words-only issues (e.g. members-elect) score at this lower threshold, flagged provisional. */
 export const PROVISIONAL_MIN_WEIGHT = 0.4;
@@ -48,7 +50,10 @@ export function evidenceWeight(
     0,
     (now.getTime() - Date.parse(e.sourceDate)) / MS_PER_YEAR
   );
-  const recency = Math.pow(0.5, ageYears / RECENCY_HALF_LIFE_YEARS);
+  const halfLife = WORD_KINDS.has(e.kind)
+    ? WORDS_HALF_LIFE_YEARS
+    : RECENCY_HALF_LIFE_YEARS;
+  const recency = Math.pow(0.5, ageYears / halfLife);
   const kind = opts.kindWeights?.[e.kind] ?? KIND_WEIGHTS[e.kind];
   return kind * (e.weight ?? 1) * e.confidence * recency;
 }

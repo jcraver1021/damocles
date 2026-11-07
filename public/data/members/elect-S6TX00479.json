@@ -216,7 +216,7 @@
       "issue": "money_in_politics",
       "score": 1,
       "provisional": true,
-      "coverage": 0.18121255698116112,
+      "coverage": 0.18109007921146247,
       "evidenceCount": 1,
       "saysVsDoesGap": false
     },
@@ -232,7 +232,7 @@
       "issue": "immigration",
       "score": 0.5,
       "provisional": true,
-      "coverage": 0.22505431470394632,
+      "coverage": 0.20900823644789257,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
@@ -312,7 +312,7 @@
       "issue": "amnesty",
       "score": 0.5,
       "provisional": true,
-      "coverage": 0.22323995101482752,
+      "coverage": 0.20354799678947855,
       "evidenceCount": 2,
       "saysVsDoesGap": false
     },
@@ -390,9 +390,9 @@
     },
     {
       "issue": "abolish_ice",
-      "score": -0.014401146847992189,
+      "score": -0.041721577528010735,
       "provisional": true,
-      "coverage": 0.5939870764817804,
+      "coverage": 0.5698569504221871,
       "evidenceCount": 7,
       "saysVsDoesGap": false
     },

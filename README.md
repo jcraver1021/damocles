@@ -38,10 +38,10 @@ Each YAML file's header documents its fields. The app builds everything from the
 an issue or category needs no code.
 
 **Scoring:** each piece of evidence has a stance (−2 to +2) and a weight (kind × anchor weight ×
-recency, halving every 6 years). An issue score is the weighted mean; a category is the mean of its
-issues, or the weakest with `aggregate: min`. The citizen index is the priority-weighted mean,
-computed in the browser. For "yes" bills, members who didn't sign on get weak "not aligned"
-evidence, which separates members within a party.
+recency: half-life 6 years for votes and bills, 2 for statements and pledges). An issue score is the
+weighted mean; a category is the mean of its issues, or the weakest with `aggregate: min`. The
+citizen index is the priority-weighted mean, computed in the browser. For "yes" bills, members who
+didn't sign on get weak "not aligned" evidence, which separates members within a party.
 
 ## Common tasks
 
